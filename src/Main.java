@@ -33,4 +33,4 @@ public class Main extends JFrame {
 
         System.out.print(flappyBird.getPos()[0]);
     }
-}
+} 
