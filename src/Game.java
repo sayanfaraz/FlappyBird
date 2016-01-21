@@ -35,17 +35,14 @@ public class Game extends JPanel{
 
     public void paintComponent(Graphics graphics) {
 
-        Image bird_img = null;
+        BufferedImage bird_img = null;
         try {
-            bird_img = ImageIO.read(new File("resources/bird.png"));
+            bird_img = ImageIO.read(new File("src" + File.separator + "resources" + File.separator + "bird.png"));
         } catch (IOException e) {
             System.out.print("Bird exception handled");
         }
 
         graphics.drawImage(bird_img, 30, 40, null);
-
-        graphics.setColor(Color.black);
-        graphics.drawRect(30,40, 100, 100);
     }
 
     public static void main(String[] args) {
