@@ -11,11 +11,14 @@ public class Main extends JFrame {
         initUI();
     }
 
+    // Initialize UI
     private void initUI() {
 
-        setTitle("Flappy Bird");
-        setSize(1500, 1000);
+        setTitle("Flappy Bird"); // title
+        setSize(1500, 1000); // size of window
         setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(194,217,239)); // background colour
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
@@ -33,4 +36,4 @@ public class Main extends JFrame {
 
         System.out.print(flappyBird.getPos()[0]);
     }
-} 
+}
