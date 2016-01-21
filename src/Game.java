@@ -2,6 +2,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 import java.io.File;
@@ -11,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by Sayan Faraz on 2016-01-11.
  */
-public class Game extends JPanel{
+public class Game extends JPanel implements MouseListener{
 
     private int game_play; // 0 for home screen, 1 for play, 2 for pause
 
@@ -21,7 +22,7 @@ public class Game extends JPanel{
     }
 
     // INITIALIZE UI
-    private static void initUI(JFrame jframe, JPanel jpanel) {
+    private void initUI(JFrame jframe, JPanel jpanel) {
 
         // Set JFrame Appearance
         jframe.setTitle("Flappy Bird"); // title
@@ -35,6 +36,9 @@ public class Game extends JPanel{
         // Add JPanel
         jframe.setContentPane(jpanel);
         jframe.setVisible(true);
+
+        // Add Mouse Listener
+        addMouseListener(this);
     }
 
     private void homeScreen(Graphics graphics) {
@@ -98,12 +102,44 @@ public class Game extends JPanel{
         game_play = 0;
     }
 
+    // MOUSE LISTENERS-------------------------------------------------------------------------------------------------
+    public void mousePressed(MouseEvent e) {
+        return;
+    }
+
+    public void mouseReleased(MouseEvent e) {
+        return;
+    }
+
+    public void mouseEntered(MouseEvent e) {
+        return;
+    }
+
+    public void mouseExited(MouseEvent e) {
+        return;
+    }
+
+    public void mouseClicked(MouseEvent e) {
+        int x = e.getX();
+        int y = e.getY();
+
+        System.out.print(x + ", " + y + " ");
+
+        if (game_play==0) {
+
+            if (x > 512 && x < 989 && y > 719 && y < 829 ) {
+                game_play=1;
+                repaint();
+            }
+        }
+    }
+
     // MAIN------------------------------------------------------------------------------------------------------------
     public static void main(String[] args) {
         FlappyBird flappyBird = new FlappyBird();
         JFrame Game_frame = new JFrame();
         Game game = new Game();
-        initUI(Game_frame, game);
+        game.initUI(Game_frame, game);
 
         game.setBackground(Color.black);
 
