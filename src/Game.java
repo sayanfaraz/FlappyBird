@@ -15,10 +15,13 @@ import java.io.IOException;
 public class Game extends JPanel implements MouseListener{
 
     private int game_play; // 0 for home screen, 1 for play, 2 for pause
+    private boolean entering_game_play; // new game?
 
     public Game () {
         super();
+        
         game_play = 0; // init at home screen
+        entering_game_play = true; // on play press, will make new game
     }
 
     // INITIALIZE UI
@@ -53,17 +56,10 @@ public class Game extends JPanel implements MouseListener{
             play_button_img = ImageIO.read(new File("src" + File.separator + "resources" + File.separator
                     + "Home Page Play Button.png"));
 
-            // Draw the background if loading successful
+            // Draw the background, play button if loading successful
             graphics.drawImage(home_screen_img, 0, 0, null);
 
-            // Create play button if loading successful
-//            JButton play_button = new JButton(new ImageIcon(play_button_img));
-//
-//            play_button.setBorder(BorderFactory.createEmptyBorder());
-//            play_button.setContentAreaFilled(false);
-
             graphics.drawImage(play_button_img, 512, 719, null);
-
 
         } catch (IOException e) {
             System.out.print("Home Page exception handled");
@@ -73,11 +69,22 @@ public class Game extends JPanel implements MouseListener{
     // GRAPHICS ENGINE
     public void paintComponent(Graphics graphics) {
 
+        // Home Screen, Play, Pause
         switch (game_play) {
             case 0:
+                entering_game_play = true;
                 homeScreen(graphics);
                 break;
             case 1:
+                // New game? Need a fresh canvas to draw on
+                if (entering_game_play) {
+                    graphics.setColor(new Color(194, 217, 239));
+                    graphics.fillRect(0,0,1500,1000);
+                    System.out.print("Color blue");
+
+                    // Game started, so set entering_game_play to false so that canvas isn't redrawn
+                    entering_game_play = false;
+                }
                 gameEngine(graphics);
                 break;
             case 2:
@@ -89,12 +96,15 @@ public class Game extends JPanel implements MouseListener{
 
     private void gameEngine(Graphics graphics) {
         BufferedImage bird_img = null;
+
+        // Load bird img
         try {
             bird_img = ImageIO.read(new File("src" + File.separator + "resources" + File.separator + "bird.png"));
         } catch (IOException e) {
             System.out.print("Bird exception handled");
         }
 
+        // Draw bird img
         graphics.drawImage(bird_img, 30, 40, null);
     }
 
@@ -120,15 +130,20 @@ public class Game extends JPanel implements MouseListener{
     }
 
     public void mouseClicked(MouseEvent e) {
+        // Get coords of mouse click
         int x = e.getX();
         int y = e.getY();
 
         System.out.print(x + ", " + y + " ");
 
+        // PLAY BUTTON
+        // Is home screen?
         if (game_play==0) {
 
+            // Did mouse press Play button?
             if (x > 512 && x < 989 && y > 719 && y < 829 ) {
-                game_play=1;
+                // Game's starting :O
+                game_play  = 1;
                 repaint();
             }
         }
