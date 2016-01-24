@@ -19,7 +19,7 @@ public class Game extends JPanel implements MouseListener{
 
     public Game () {
         super();
-        
+
         game_play = 0; // init at home screen
         entering_game_play = true; // on play press, will make new game
     }
