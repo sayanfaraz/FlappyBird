@@ -4,7 +4,7 @@
 public class FlappyBird {
 
     // VARIABLES--------------------------------------------------------------------------------------------------------
-    private int[] pos = new int[2];  // vertical position of FlappyBird
+    private int[] pos = new int[2];  // (x,y) position of FlappyBird
     private boolean alive;  // is FlappyBird alive or dead?
 
     public FlappyBird () {
