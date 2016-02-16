@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcfdbf3a-ba0d-4a8b-99c2-3c2ace7811d7" name="Default" comment="v0.3.4&#10;&#10;Made the bird the right size">
+    <list default="true" id="fcfdbf3a-ba0d-4a8b-99c2-3c2ace7811d7" name="Default" comment="v0.3.5&#10;&#10;If clicked, bird moves up">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/Game.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/Obstacle.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/Obstacle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FlappyBird.java" afterPath="$PROJECT_DIR$/src/FlappyBird.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
@@ -29,25 +29,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="FlappyBird.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FlappyBird.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6291718">
-              <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+              <folding>
+                <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="164" column="27" selection-start-line="164" selection-start-column="27" selection-end-line="164" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.6909765">
+              <caret line="182" column="53" selection-start-line="182" selection-start-column="53" selection-end-line="182" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3985#3986#0" expanded="true" />
-                <element signature="e#4014#4015#0" expanded="true" />
+                <element signature="e#4059#4060#0" expanded="true" />
+                <element signature="e#4088#4089#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,8 +110,8 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Engine.java" />
         <option value="$PROJECT_DIR$/src/Obstacle.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/FlappyBird.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
       </list>
     </option>
   </component>
@@ -559,7 +561,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455582030771</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v0.3.5&#10;&#10;If clicked, bird moves up">
+      <created>1455582937852</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1455582937852</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -577,6 +585,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2524472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -588,7 +597,6 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="242" y="89" width="1829" height="1262" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -605,7 +613,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reformatted some code to meet Google Java standards" />
     <MESSAGE value="v0.3.4&#10;&#10;Made the bird the right size" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.3.4&#10;&#10;Made the bird the right size" />
+    <MESSAGE value="v0.3.5&#10;&#10;If clicked, bird moves up" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.3.5&#10;&#10;If clicked, bird moves up" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -623,7 +632,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -633,8 +644,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -661,7 +672,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -671,8 +684,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -699,7 +712,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -709,8 +724,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -737,7 +752,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -747,8 +764,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -775,7 +792,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -785,8 +804,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -813,7 +832,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -823,8 +844,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -851,7 +872,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -861,8 +884,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -879,7 +902,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -889,8 +914,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -907,7 +932,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -917,8 +944,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -935,7 +962,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -945,8 +974,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -963,7 +992,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -973,8 +1004,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1053,23 +1084,25 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="164" column="27" selection-start-line="164" selection-start-column="27" selection-end-line="164" selection-end-column="27" />
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4014#4015#0" expanded="true" />
+            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6291718">
-          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-          <folding />
+        <state vertical-scroll-proportion="0.6909765">
+          <caret line="182" column="53" selection-start-line="182" selection-start-column="53" selection-end-line="182" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4088#4089#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

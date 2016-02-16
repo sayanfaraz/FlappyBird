@@ -105,6 +105,9 @@ public class Game extends JPanel implements MouseListener {
     private void gameEngine(Graphics graphics) {
         BufferedImage bird_img = null;
 
+        // Reset bird
+        resetBird(graphics);
+
         // Load bird img
         try {
             bird_img = ImageIO.read(new File("src" + File.separator +
@@ -114,7 +117,8 @@ public class Game extends JPanel implements MouseListener {
         }
 
         // Draw bird img
-        int[] scaled_parameters = scaleBirdInts(10);
+        int[] scaled_parameters = flappyBird.getImg_dimensions();
+
         graphics.drawImage(bird_img, flappyBird.getPos()[0], flappyBird
                         .getPos()[1],
                 scaled_parameters[0],
@@ -170,24 +174,15 @@ public class Game extends JPanel implements MouseListener {
 
     // HELPER FUNCTIONS---------------------------------------------------------
 
-    /**
-     * Returns scaled dimensions of bird image, given a scale factor.
-     *
-     * @param scale_factor {int}
-     * @return {int[]} {new_width, new_height}
-     */
-    private int[] scaleBirdInts(int scale_factor) {
-        // Init ret list
-        int[] ret_list;
-
-        int new_width = 973 / scale_factor;
-        int new_height = 782 / scale_factor;
-
-        // Return scaled parameters
-        ret_list = new int[]{new_width, new_height};
-
-        return ret_list;
+    private void resetBird(Graphics graphics) {
+        // Reset current bird
+        graphics.setColor(new Color(194, 217, 239));
+        graphics.fillRect(flappyBird.getPos()[0] - 2, flappyBird.getPos()[1]
+                        - 2,
+                flappyBird.getImg_dimensions()[0] + 4,
+                flappyBird.getImg_dimensions()[1] + 7);
     }
+
 
     // MAIN---------------------------------------------------------------------
     public static void main(String[] args) {
