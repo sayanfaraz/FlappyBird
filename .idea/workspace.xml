@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcfdbf3a-ba0d-4a8b-99c2-3c2ace7811d7" name="Default" comment="v0.3.9&#10;&#10;Fall/fly functionality of bird works properly now :D">
+    <list default="true" id="fcfdbf3a-ba0d-4a8b-99c2-3c2ace7811d7" name="Default" comment="v0.3.10&#10;&#10;Cleaned up code">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/Engine.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/Engine.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/Game.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/Game.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Engine.java" afterPath="$PROJECT_DIR$/src/Engine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FlappyBird.java" afterPath="$PROJECT_DIR$/src/FlappyBird.java" />
     </list>
     <ignored path="FlappyBird.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -600,7 +598,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455604706791</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="v0.3.10&#10;&#10;Cleaned up code">
+      <created>1455605243457</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1455605243457</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -652,7 +656,8 @@
     <MESSAGE value="v0.3.7&#10;&#10;Flappy bird can fly now :D" />
     <MESSAGE value="v0.3.8&#10;&#10;Fixed my getters and setters so they copy values instead of references .-. #nooberrors" />
     <MESSAGE value="v0.3.9&#10;&#10;Fall/fly functionality of bird works properly now :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.3.9&#10;&#10;Fall/fly functionality of bird works properly now :D" />
+    <MESSAGE value="v0.3.10&#10;&#10;Cleaned up code" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.3.10&#10;&#10;Cleaned up code" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
