@@ -6,11 +6,16 @@ import java.util.IllegalFormatCodePointException;
  * Created by Sayan Faraz on 2016-01-22.
  */
 public class Engine {
-    ArrayList<Obstacle> obstacle_stack = new ArrayList<>(); //
+    ArrayList<Obstacle> obstacle_stack; // Arraylist of obstacles
+    int[] beginning_constraints;
 
     public Engine () {
+        // Init beginning constraints
+        beginning_constraints = new int[] {15, 30, 50, 100};
+
         // Add 3 columns of obstacles for the beginning
-        make_Multiple_Obstacles(3, obstacle_stack, beginning_constraints);
+        obstacle_stack = new ArrayList<>();
+        this.add_Multiple_Obstacles(3, beginning_constraints);
     }
 
     /**

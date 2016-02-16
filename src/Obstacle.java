@@ -7,7 +7,8 @@ public class Obstacle {
     int dist_from_origin;  // distance of obstacle to origin
     int width;  // width of obstacle
 
-    public Obstacle(int xpos, boolean orientation, int dist_from_origin, int width) {
+    public Obstacle(int xpos, boolean orientation, int dist_from_origin,
+                    int width) {
         this.xpos = xpos;
         this.orientation = orientation;
         this.dist_from_origin = dist_from_origin;
@@ -19,6 +20,7 @@ public class Obstacle {
     public int getXpos() {
         return xpos;
     }
+
     public void setXpos(int xpos) {
         this.xpos = xpos;
     }
@@ -26,6 +28,7 @@ public class Obstacle {
     public boolean isOrientatedUp() {
         return orientation;
     }
+
     public void setOrientation(boolean orientation) {
         this.orientation = orientation;
     }
@@ -33,6 +36,7 @@ public class Obstacle {
     public int getDist_from_origin() {
         return dist_from_origin;
     }
+
     public void setDist_from_origin(int dist) {
         this.dist_from_origin = dist;
     }
@@ -40,6 +44,7 @@ public class Obstacle {
     public int getWidth() {
         return width;
     }
+
     public void setWidth(int width) {
         this.width = width;
     }

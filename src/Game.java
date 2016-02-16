@@ -1,5 +1,6 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
@@ -12,12 +13,12 @@ import java.io.IOException;
 /**
  * Created by Sayan Faraz on 2016-01-11.
  */
-public class Game extends JPanel implements MouseListener{
+public class Game extends JPanel implements MouseListener {
 
     private int game_play; // 0 for home screen, 1 for play, 2 for pause
     private boolean entering_game_play; // new game?
 
-    public Game () {
+    public Game() {
         super();
 
         game_play = 0; // init at home screen
@@ -31,7 +32,7 @@ public class Game extends JPanel implements MouseListener{
         jframe.setTitle("Flappy Bird"); // title
         jframe.setSize(1500, 1000); // size of window
         jframe.setLocationRelativeTo(null);
-        jframe.setBackground(new Color(194,217,239)); // background colour;
+        jframe.setBackground(new Color(194, 217, 239)); // background colour;
 
         // Set JFrame Behaviour
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exit on close
@@ -51,9 +52,11 @@ public class Game extends JPanel implements MouseListener{
 
         // Try to load the images; return exception if error
         try {
-            home_screen_img = ImageIO.read(new File("src" + File.separator + "resources" + File.separator
+            home_screen_img = ImageIO.read(new File("src" + File.separator +
+                    "resources" + File.separator
                     + "Home Page Background.png"));
-            play_button_img = ImageIO.read(new File("src" + File.separator + "resources" + File.separator
+            play_button_img = ImageIO.read(new File("src" + File.separator +
+                    "resources" + File.separator
                     + "Home Page Play Button.png"));
 
             // Draw the background, play button if loading successful
@@ -79,10 +82,11 @@ public class Game extends JPanel implements MouseListener{
                 // New game? Need a fresh canvas to draw on
                 if (entering_game_play) {
                     graphics.setColor(new Color(194, 217, 239));
-                    graphics.fillRect(0,0,1500,1000);
+                    graphics.fillRect(0, 0, 1500, 1000);
                     System.out.print("Color blue");
 
-                    // Game started, so set entering_game_play to false so that canvas isn't redrawn
+                    // Game started, so set entering_game_play to false so that
+                    // canvas isn't redrawn
                     entering_game_play = false;
                 }
                 gameEngine(graphics);
@@ -92,14 +96,15 @@ public class Game extends JPanel implements MouseListener{
         }
     }
 
-    // GAME ENGINE-----------------------------------------------------------------------------------------------------
+    // GAME ENGINE--------------------------------------------------------------
 
     private void gameEngine(Graphics graphics) {
         BufferedImage bird_img = null;
 
         // Load bird img
         try {
-            bird_img = ImageIO.read(new File("src" + File.separator + "resources" + File.separator + "bird.png"));
+            bird_img = ImageIO.read(new File("src" + File.separator +
+                    "resources" + File.separator + "bird.png"));
         } catch (IOException e) {
             System.out.print("Bird exception handled");
         }
@@ -108,11 +113,11 @@ public class Game extends JPanel implements MouseListener{
         graphics.drawImage(bird_img, 30, 40, null);
     }
 
-    private void gamePause () {
+    private void gamePause() {
         game_play = 0;
     }
 
-    // MOUSE LISTENERS-------------------------------------------------------------------------------------------------
+    // MOUSE LISTENERS----------------------------------------------------------
     public void mousePressed(MouseEvent e) {
         return;
     }
@@ -138,18 +143,18 @@ public class Game extends JPanel implements MouseListener{
 
         // PLAY BUTTON
         // Is home screen?
-        if (game_play==0) {
+        if (game_play == 0) {
 
             // Did mouse press Play button?
-            if (x > 512 && x < 989 && y > 719 && y < 829 ) {
+            if (x > 512 && x < 989 && y > 719 && y < 829) {
                 // Game's starting :O
-                game_play  = 1;
+                game_play = 1;
                 repaint();
             }
         }
     }
 
-    // MAIN------------------------------------------------------------------------------------------------------------
+    // MAIN---------------------------------------------------------------------
     public static void main(String[] args) {
         FlappyBird flappyBird = new FlappyBird();
         JFrame Game_frame = new JFrame();
