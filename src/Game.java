@@ -107,6 +107,9 @@ public class Game extends JPanel implements MouseListener {
         resetBird(graphics);
         drawBird(graphics);
 
+        // Make flappy bird fall
+        flappyBird.fall();
+        repaint();
     }
 
     private void gamePause() {
@@ -150,13 +153,16 @@ public class Game extends JPanel implements MouseListener {
         }
         // Is it play screen?
         else if (game_play == 1) {
-            // Move bird up
-            flappyBird.moveUp();
-            repaint();
+            clickBird();
         }
     }
 
     // HELPER FUNCTIONS---------------------------------------------------------
+
+    private void clickBird() {
+        flappyBird.clickBird();
+        repaint();
+    }
 
     private void drawBird(Graphics graphics) {
         BufferedImage bird_img = null;
@@ -181,9 +187,9 @@ public class Game extends JPanel implements MouseListener {
     private void resetBird(Graphics graphics) {
         // Reset current bird
         graphics.setColor(new Color(194, 217, 239));
-        graphics.fillRect(flappyBird.getPos()[0] - 2, flappyBird.getPos()[1]
+        graphics.fillRect(flappyBird.getPos()[0] - 4, flappyBird.getPos()[1]
                         - 2,
-                flappyBird.getImg_dimensions()[0] + 4,
+                flappyBird.getImg_dimensions()[0] + 8,
                 flappyBird.getImg_dimensions()[1] + 7);
     }
 

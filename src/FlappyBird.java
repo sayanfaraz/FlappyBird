@@ -7,12 +7,15 @@ public class FlappyBird {
     private int[] pos = new int[2];  // (x,y) position of FlappyBird
     private boolean alive;  // is FlappyBird alive or dead?
     private int[] img_dimensions = new int[2];
+    private float fall_time; // time that flappy bird has been falling
 
     public FlappyBird() {
         pos[0] = 0;
         pos[1] = 0;  // set pos to (0,0)
-        alive = true;  // FlappyBird is alive
         img_dimensions = FlappyBird.scaleBirdInts(10);
+
+        alive = true;  // FlappyBird is alive
+        fall_time = 0;
     }
 
 
@@ -35,6 +38,7 @@ public class FlappyBird {
         this.alive = alive;
     }
 
+
     public int[] getImg_dimensions() {
         return img_dimensions;
     }
@@ -42,6 +46,16 @@ public class FlappyBird {
     public void setImg_dimensions(int[] img_dimensions) {
         this.img_dimensions = img_dimensions;
     }
+
+
+    public float getFall_time() {
+        return fall_time;
+    }
+
+    public void setFall_time(float fall_time) {
+        this.fall_time = fall_time;
+    }
+
 
     // FLAPPY BIRD IMAGE--------------------------------------------------------
 
@@ -66,26 +80,18 @@ public class FlappyBird {
 
     // GAME FUNCTIONALITY-------------------------------------------------------
 
-    // MOVE
-
-    public void moveUp() {
-        int[] curr_pos = this.getPos();
-
-        int[] new_pos = curr_pos;
-
-        new_pos[1] -= 5;
-
-        this.setPos(new_pos);
+    // CLICK
+    public void clickBird() {
+        moveUp(50);
+        fall_time = 0;
     }
 
-    public void moveDown() {
-        int[] curr_pos = this.getPos();
-
-        int[] new_pos = curr_pos;
-
-        new_pos[1] += 5;
+    // FALL
+    public void fall() {
+        int fall_distance = (int) (fall_time * fall_time);
+        moveDown(fall_distance);
+        fall_time += 0.25;
     }
-
 
     // KILL
 
@@ -129,6 +135,34 @@ public class FlappyBird {
     }
 
     // BASIC GAME FUNCTIONALITY
+
+    // MOVE
+
+    public void moveUp() {
+        moveUp(5);
+    }
+
+    public void moveUp(int amount) {
+        int[] curr_pos = this.getPos();
+
+        int[] new_pos = curr_pos;
+
+        new_pos[1] -= amount;
+
+        this.setPos(new_pos);
+    }
+
+    public void moveDown() {
+        moveDown(5);
+    }
+
+    public void moveDown(int amount) {
+        int[] curr_pos = this.getPos();
+
+        int[] new_pos = curr_pos;
+
+        new_pos[1] += amount;
+    }
 
     public void hasCollided(Obstacle obstacle) {
         if (this.insideObstacle(obstacle)) {
