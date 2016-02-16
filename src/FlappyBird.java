@@ -12,7 +12,7 @@ public class FlappyBird {
     private float fall_time; // time that FlappyBird has been falling
 
     public FlappyBird() {
-        pos[0] = 0;
+        pos[0] = 50;
         pos[1] = 0;  // set pos to (0,0)
         img_dimensions = FlappyBird.scaleBirdInts(10);
 

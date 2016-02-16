@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Engine {
     ArrayList<Obstacle> obstacle_stack; // Arraylist of obstacles
     int[] beginning_constraints;
+    FlappyBird flappyBird;
 
     public Engine () {
         // Init beginning constraints
@@ -14,7 +15,33 @@ public class Engine {
         // Add 3 columns of obstacles for the beginning
         obstacle_stack = new ArrayList<>();
         this.add_Multiple_Obstacles(3, beginning_constraints);
+
+        // Make Flappy bird
+        flappyBird = new FlappyBird();
     }
+    // GETTERS, SETTERS---------------------------------------------------------
+
+    public ArrayList<Obstacle> getObstacle_stack() {
+        return obstacle_stack;
+    }
+
+    public void setObstacle_stack(ArrayList<Obstacle> obstacle_stack) {
+        this.obstacle_stack = obstacle_stack;
+    }
+
+    public FlappyBird getFlappyBird() {
+        return flappyBird;
+    }
+
+    public void setFlappyBird(FlappyBird flappyBird) {
+        this.flappyBird = flappyBird;
+    }
+//    public FlappyBird getFlappyBirdCopy() {
+//        return flappyBird;
+//    }
+//    public void setFlappyBirdFromCopy(FlappyBird flappyBird) {
+//        this.flappyBird = flappyBird;
+//    }
 
     /**
      * Given parameters, make a random obstacle.
@@ -47,8 +74,8 @@ public class Engine {
      * @param constraints {int[]} Array of constraints, 4 parameters
      * @return {ArrayList} List of obstacles
      */
-    public static ArrayList<Obstacle> make_Multiple_Obstacles(int num_of_obstacles,
-                                               int[] constraints) {
+    public static ArrayList<Obstacle> make_Multiple_Obstacles
+    (int num_of_obstacles, int[] constraints) {
 
         // Check if constraints is formatted properly
         if (is_format_constraints(constraints)) {

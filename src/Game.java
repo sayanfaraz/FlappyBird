@@ -15,14 +15,15 @@ public class Game extends JPanel implements MouseListener {
 
     private int game_play; // 0 for home screen, 1 for play, 2 for pause
     private boolean entering_game_play; // new game?
-    private FlappyBird flappyBird;
+    private Engine engine;
+    //private FlappyBird flappyBird;
 
     public Game() {
         super();
 
         game_play = 0; // init at home screen
         entering_game_play = true; // on play press, will make new game
-        flappyBird = new FlappyBird(); // init Flappy Bird
+        engine = new Engine(); // init engine
     }
 
     // INITIALIZE UI
@@ -96,10 +97,10 @@ public class Game extends JPanel implements MouseListener {
                 gamePause();
         }
 
-        System.out.println("x: " + flappyBird.getPos()[0]
-                + " y: " + flappyBird.getPos()[1]
-                + "    prevx: " + flappyBird.getPrev_pos()[0]
-                + " prevy: " + flappyBird.getPrev_pos()[1]);
+        System.out.println("x: " + engine.getFlappyBird().getPos()[0]
+                + " y: " + engine.getFlappyBird().getPos()[1]
+                + "    prevx: " + engine.getFlappyBird().getPrev_pos()[0]
+                + " prevy: " + engine.getFlappyBird().getPrev_pos()[1]);
     }
 
     // GAME ENGINE--------------------------------------------------------------
@@ -110,7 +111,7 @@ public class Game extends JPanel implements MouseListener {
         drawBird(graphics);
 
         // Make flappy bird fall
-        flappyBird.fall();
+        engine.getFlappyBird().fall();
         repaint();
     }
 
@@ -160,7 +161,7 @@ public class Game extends JPanel implements MouseListener {
     // HELPER FUNCTIONS---------------------------------------------------------
 
     private void clickBird() {
-        flappyBird.clickBird();
+        engine.getFlappyBird().clickBird();
         repaint();
     }
 
@@ -176,9 +177,9 @@ public class Game extends JPanel implements MouseListener {
         }
 
         // Draw bird img
-        int[] scaled_parameters = flappyBird.getImg_dimensions();
+        int[] scaled_parameters = engine.getFlappyBird().getImg_dimensions();
 
-        graphics.drawImage(bird_img, flappyBird.getPos()[0], flappyBird
+        graphics.drawImage(bird_img, engine.getFlappyBird().getPos()[0], engine.getFlappyBird()
                         .getPos()[1],
                 scaled_parameters[0],
                 scaled_parameters[1], null);
@@ -187,16 +188,15 @@ public class Game extends JPanel implements MouseListener {
     private void resetBird(Graphics graphics) {
         // Reset current bird
         graphics.setColor(new Color(194, 217, 239));
-        graphics.fillRect(flappyBird.getPrev_pos()[0],
-                flappyBird.getPrev_pos()[1],
-                flappyBird.getImg_dimensions()[0],
-                flappyBird.getImg_dimensions()[1]);
+        graphics.fillRect(engine.getFlappyBird().getPrev_pos()[0],
+                engine.getFlappyBird().getPrev_pos()[1],
+                engine.getFlappyBird().getImg_dimensions()[0],
+                engine.getFlappyBird().getImg_dimensions()[1]);
     }
 
 
     // MAIN---------------------------------------------------------------------
     public static void main(String[] args) {
-        FlappyBird flappyBird = new FlappyBird();
         JFrame Game_frame = new JFrame();
         Game game = new Game();
         game.initUI(Game_frame, game);
