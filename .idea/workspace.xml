@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcfdbf3a-ba0d-4a8b-99c2-3c2ace7811d7" name="Default" comment="v0.3.7&#10;&#10;Clean up code (add helper functions)">
+    <list default="true" id="fcfdbf3a-ba0d-4a8b-99c2-3c2ace7811d7" name="Default" comment="v0.3.7&#10;&#10;Flappy bird can fly now :D">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/Game.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/Game.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -28,19 +28,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="FlappyBird.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FlappyBird.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5253399">
-              <caret line="92" column="24" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding>
-                <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-                <element signature="e#1189#1190#0" expanded="true" />
-                <element signature="e#1221#1222#0" expanded="true" />
-                <element signature="e#1270#1271#0" expanded="true" />
-                <element signature="e#1312#1313#0" expanded="true" />
-                <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-                <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#4860#4861#0" expanded="true" />
+                <element signature="e#4887#4888#0" expanded="true" />
                 <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
               </folding>
             </state>
@@ -50,12 +46,12 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="186" column="47" selection-start-line="186" selection-start-column="47" selection-end-line="186" selection-end-column="47" />
+            <state vertical-scroll-proportion="-58.522728">
+              <caret line="103" column="69" selection-start-line="103" selection-start-column="69" selection-end-line="103" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3565#3566#0" expanded="true" />
-                <element signature="e#3594#3595#0" expanded="true" />
+                <element signature="e#3781#3782#0" expanded="true" />
+                <element signature="e#3810#3811#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,12 +76,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Obstacle.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Obstacle.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Obstacle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="0.15451175">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding>
+                <element signature="e#597#598#0" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#693#694#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -585,7 +586,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455585985403</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="v0.3.7&#10;&#10;Flappy bird can fly now :D">
+      <created>1455587419512</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1455587419512</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -634,12 +641,13 @@
     <MESSAGE value="v0.3.5&#10;&#10;If clicked, bird moves up" />
     <MESSAGE value="v0.3.6&#10;&#10;If clicked, bird moves up properly (doesn't leave prev bird in GUI)" />
     <MESSAGE value="v0.3.7&#10;&#10;Clean up code (add helper functions)" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.3.7&#10;&#10;Clean up code (add helper functions)" />
+    <MESSAGE value="v0.3.7&#10;&#10;Flappy bird can fly now :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.3.7&#10;&#10;Flappy bird can fly now :D" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -653,13 +661,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -671,8 +675,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -691,7 +695,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -700,13 +709,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -718,8 +723,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -738,7 +743,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -747,13 +757,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -765,8 +771,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -785,7 +791,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -794,13 +805,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -812,8 +819,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -832,7 +839,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -841,13 +853,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -859,8 +867,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -879,7 +887,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -888,13 +901,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -906,8 +915,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -926,7 +935,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -935,13 +949,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -953,8 +963,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -963,7 +973,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -972,13 +987,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -990,8 +1001,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1000,7 +1011,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1009,13 +1025,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -1027,8 +1039,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1037,7 +1049,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,13 +1063,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -1064,8 +1077,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1074,7 +1087,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,13 +1101,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
             <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
@@ -1101,8 +1115,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1111,7 +1125,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1158,12 +1177,21 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Obstacle.java">
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="-58.522728">
+          <caret line="103" column="69" selection-start-line="103" selection-start-column="69" selection-end-line="103" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
+            <element signature="e#3810#3811#0" expanded="true" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/bird.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Engine.java">
@@ -1176,36 +1204,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/bird.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="186" column="47" selection-start-line="186" selection-start-column="47" selection-end-line="186" selection-end-column="47" />
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
+            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
+    <entry file="file://$PROJECT_DIR$/src/Obstacle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5253399">
-          <caret line="92" column="24" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.15451175">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding>
-            <element signature="method#setImg_dimensions#0;class#FlappyBird#0" expanded="false" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="method#moveUp#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#moveDown#1;class#FlappyBird#0" expanded="false" />
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
           </folding>
         </state>
       </provider>

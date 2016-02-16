@@ -86,7 +86,6 @@ public class Game extends JPanel implements MouseListener {
                 if (entering_game_play) {
                     graphics.setColor(new Color(194, 217, 239));
                     graphics.fillRect(0, 0, 1500, 1000);
-                    System.out.print("Color blue");
 
                     // Game started, so set entering_game_play to false so that
                     // canvas isn't redrawn
@@ -98,6 +97,11 @@ public class Game extends JPanel implements MouseListener {
             case 2:
                 gamePause();
         }
+
+        System.out.println("x: " + flappyBird.getPos()[0]
+                + " y: " + flappyBird.getPos()[1]
+                + "    prevx: " + flappyBird.getPrev_pos()[0]
+                + " prevy: " + flappyBird.getPrev_pos()[1]);
     }
 
     // GAME ENGINE--------------------------------------------------------------
@@ -137,8 +141,6 @@ public class Game extends JPanel implements MouseListener {
         // Get coords of mouse click
         int x = e.getX();
         int y = e.getY();
-
-        System.out.print(x + ", " + y + " ");
 
         // PLAY BUTTON
         // Is home screen?
@@ -187,8 +189,8 @@ public class Game extends JPanel implements MouseListener {
     private void resetBird(Graphics graphics) {
         // Reset current bird
         graphics.setColor(new Color(194, 217, 239));
-        graphics.fillRect(flappyBird.getPos()[0] - 4, flappyBird.getPos()[1]
-                        - 2,
+        graphics.fillRect(flappyBird.getPrev_pos()[0] - 4,
+                flappyBird.getPrev_pos()[1] - 2,
                 flappyBird.getImg_dimensions()[0] + 8,
                 flappyBird.getImg_dimensions()[1] + 7);
     }
@@ -202,7 +204,5 @@ public class Game extends JPanel implements MouseListener {
         game.initUI(Game_frame, game);
 
         game.setBackground(Color.black);
-
-        System.out.print(flappyBird.getPos()[0]);
     }
 }

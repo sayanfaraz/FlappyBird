@@ -1,13 +1,18 @@
+import com.sun.org.apache.bcel.internal.generic.RET;
+
+import javax.sound.sampled.ReverbType;
+
 /**
  * Created by Sayan Faraz on 2016-01-11.
  */
 public class FlappyBird {
 
     // VARIABLES----------------------------------------------------------------
+    private int[] prev_pos = new int[2]; // prev pos of FlappyBird
     private int[] pos = new int[2];  // (x,y) position of FlappyBird
     private boolean alive;  // is FlappyBird alive or dead?
     private int[] img_dimensions = new int[2];
-    private float fall_time; // time that flappy bird has been falling
+    private float fall_time; // time that FlappyBird has been falling
 
     public FlappyBird() {
         pos[0] = 0;
@@ -22,38 +27,85 @@ public class FlappyBird {
     // GETTERS, SETTERS---------------------------------------------------------
 
     public int[] getPos() {
-        return pos;
+        int x = this.pos[0];
+        int y = this.pos[1];
+
+        int[] ret_pos = new int[]{x, y};
+
+        return ret_pos;
     }
 
     public void setPos(int[] pos) {
-        this.pos = pos;
+        setPrev_pos(this.getPos());
+
+        int new_pos_x = pos[0];
+        int new_pos_y = pos[1];
+
+        int[] new_pos = new int[]{new_pos_x, new_pos_y};
+        this.pos = new_pos;
     }
 
 
+    public int[] getPrev_pos() {
+        int x = this.prev_pos[0];
+        int y = this.prev_pos[1];
+
+        int[] ret_pos = new int[]{x, y};
+
+        return ret_pos;
+    }
+
+    public void setPrev_pos(int[] prev_pos_in) {
+        int prev_pos_x = prev_pos_in[0];
+        int prev_pos_y = prev_pos_in[1];
+        int[] new_prev_pos = new int[]{prev_pos_x, prev_pos_y};
+        this.prev_pos = new_prev_pos;
+    }
+
     public boolean isAlive() {
-        return alive;
+        boolean ret_bool = this.alive;
+        return ret_bool;
     }
 
     public void setAlive(boolean alive) {
-        this.alive = alive;
+        boolean new_bool = alive;
+        this.alive = new_bool;
     }
 
 
     public int[] getImg_dimensions() {
-        return img_dimensions;
+
+        int x = this.img_dimensions[0];
+        int y = this.img_dimensions[1];
+
+        int[] ret_list = new int[]{x, y};
+
+        return ret_list;
     }
 
     public void setImg_dimensions(int[] img_dimensions) {
-        this.img_dimensions = img_dimensions;
+
+        int x = img_dimensions[0];
+        int y = img_dimensions[1];
+
+        int[] new_img_dimensions = new int[]{x, y};
+
+        this.img_dimensions = new_img_dimensions;
     }
 
 
     public float getFall_time() {
-        return fall_time;
+
+        float ret_float = this.fall_time;
+
+        return ret_float;
     }
 
     public void setFall_time(float fall_time) {
-        this.fall_time = fall_time;
+
+        float new_fall_time = fall_time;
+
+        this.fall_time = new_fall_time;
     }
 
 
@@ -162,6 +214,8 @@ public class FlappyBird {
         int[] new_pos = curr_pos;
 
         new_pos[1] += amount;
+
+        this.setPos(new_pos);
     }
 
     public void hasCollided(Obstacle obstacle) {
