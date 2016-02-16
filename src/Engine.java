@@ -1,17 +1,25 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by Sayan Faraz on 2016-01-22.
  */
 public class Engine {
-    ArrayList<Obstacle> obstacle_stack; // Arraylist of obstacles
-    int[] beginning_constraints;
-    FlappyBird flappyBird;
+    // VARIABLES
+    private ArrayList<Obstacle> obstacle_stack; // Arraylist of obstacles
+    FlappyBird flappyBird; // FlappyBird
 
-    public Engine () {
-        // Init beginning constraints
-        beginning_constraints = new int[] {15, 30, 50, 100};
+    // CONSTRAINTS
+    private static int[] beginning_constraints = new int[]{15, 30, 50, 100};
+    // beginning constraints for obstacles
+    private static ArrayList<int[]> colour_wheel = new ArrayList<>(Arrays
+            .asList(new int[]{241, 101, 76}, // orange
+                    new int[]{34, 77, 130}, // blue
+                    new int[]{187, 54, 88}, // red
+                    new int[]{50, 109, 101}, // green
+                    new int[]{95, 55, 194})); // purple
 
+    public Engine() {
         // Add 3 columns of obstacles for the beginning
         obstacle_stack = new ArrayList<>();
         this.add_Multiple_Obstacles(3, beginning_constraints);
@@ -63,8 +71,11 @@ public class Engine {
 
         int rand_width = (int)(Math.random()*100 + 50);
 
+        int rand_color = (int) (Math.random() * 5);
+
         // Init Obstacle based on random stats
-        return new Obstacle(rand_x, rand_orientation, rand_height, rand_width);
+        return new Obstacle(rand_x, rand_orientation, rand_height,
+                rand_width, Engine.colour_wheel.get(rand_color));
     }
 
     /**

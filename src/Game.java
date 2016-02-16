@@ -16,7 +16,6 @@ public class Game extends JPanel implements MouseListener {
     private int game_play; // 0 for home screen, 1 for play, 2 for pause
     private boolean entering_game_play; // new game?
     private Engine engine;
-    //private FlappyBird flappyBird;
 
     public Game() {
         super();
@@ -48,8 +47,8 @@ public class Game extends JPanel implements MouseListener {
 
     private void homeScreen(Graphics graphics) {
         // Define BufferedImages
-        BufferedImage home_screen_img = null;
-        BufferedImage play_button_img = null;
+        BufferedImage home_screen_img;
+        BufferedImage play_button_img;
 
         // Try to load the images; return exception if error
         try {
