@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fcfdbf3a-ba0d-4a8b-99c2-3c2ace7811d7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Engine.java" afterPath="$PROJECT_DIR$/src/Engine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FlappyBird.java" afterPath="$PROJECT_DIR$/src/FlappyBird.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Obstacle.java" afterPath="$PROJECT_DIR$/src/Obstacle.java" />
     </list>
     <ignored path="FlappyBird.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,23 +35,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="156" column="80" selection-start-line="156" selection-start-column="80" selection-end-line="156" selection-end-column="80" />
+            <state vertical-scroll-proportion="0.4128554">
+              <caret line="105" column="24" selection-start-line="104" selection-start-column="0" selection-end-line="105" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3817#3818#0" expanded="true" />
+                <element signature="e#3846#3847#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bird.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/bird.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.123609394">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,6 +89,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -95,8 +104,8 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Engine.java" />
         <option value="$PROJECT_DIR$/src/FlappyBird.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/Obstacle.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
       </list>
     </option>
   </component>
@@ -534,6 +543,13 @@
       <option name="number" value="Default" />
       <updated>1453314107902</updated>
     </task>
+    <task id="LOCAL-00001" summary="Reformatted some code to meet Google Java standards">
+      <created>1455580863172</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1455580863172</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -576,6 +592,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Reformatted some code to meet Google Java standards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformatted some code to meet Google Java standards" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -601,6 +621,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -637,6 +659,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -673,6 +697,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -709,6 +735,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -745,6 +773,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -781,6 +811,8 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -817,6 +849,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -843,6 +877,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -869,6 +905,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -895,6 +933,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -921,6 +961,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -961,11 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/bird.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Design Files/Home Page Mockup.psd">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -981,24 +1018,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="156" column="80" selection-start-line="156" selection-start-column="80" selection-end-line="156" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Obstacle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1007,12 +1026,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.123609394">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/bird.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4128554">
+          <caret line="105" column="24" selection-start-line="104" selection-start-column="0" selection-end-line="105" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3817#3818#0" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
           </folding>
         </state>
       </provider>

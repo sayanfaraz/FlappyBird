@@ -74,6 +74,7 @@ public class Game extends JPanel implements MouseListener {
 
         // Home Screen, Play, Pause
         switch (game_play) {
+            // Home Screen
             case 0:
                 entering_game_play = true;
                 homeScreen(graphics);
@@ -91,6 +92,7 @@ public class Game extends JPanel implements MouseListener {
                 }
                 gameEngine(graphics);
                 break;
+            // Pause
             case 2:
                 gamePause();
         }
@@ -110,7 +112,9 @@ public class Game extends JPanel implements MouseListener {
         }
 
         // Draw bird img
-        graphics.drawImage(bird_img, 30, 40, null);
+        int[] scaled_parameters = scaleBirdInts(10);
+        graphics.drawImage(bird_img, 30, 40, scaled_parameters[0],
+                scaled_parameters[1], null);
     }
 
     private void gamePause() {
@@ -152,6 +156,27 @@ public class Game extends JPanel implements MouseListener {
                 repaint();
             }
         }
+    }
+
+    // HELPER FUNCTIONS---------------------------------------------------------
+
+    /**
+     * Returns scaled dimensions of bird image, given a scale factor.
+     *
+     * @param scale_factor {int}
+     * @return {int[]} {new_width, new_height}
+     */
+    private int[] scaleBirdInts(int scale_factor) {
+        // Init ret list
+        int[] ret_list;
+
+        int new_width = 973 / scale_factor;
+        int new_height = 782 / scale_factor;
+
+        // Return scaled parameters
+        ret_list = new int[]{new_width, new_height};
+
+        return ret_list;
     }
 
     // MAIN---------------------------------------------------------------------
