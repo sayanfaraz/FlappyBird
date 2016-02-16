@@ -103,26 +103,10 @@ public class Game extends JPanel implements MouseListener {
     // GAME ENGINE--------------------------------------------------------------
 
     private void gameEngine(Graphics graphics) {
-        BufferedImage bird_img = null;
-
-        // Reset bird
+        // Draw bird
         resetBird(graphics);
+        drawBird(graphics);
 
-        // Load bird img
-        try {
-            bird_img = ImageIO.read(new File("src" + File.separator +
-                    "resources" + File.separator + "bird.png"));
-        } catch (IOException e) {
-            System.out.print("Bird exception handled");
-        }
-
-        // Draw bird img
-        int[] scaled_parameters = flappyBird.getImg_dimensions();
-
-        graphics.drawImage(bird_img, flappyBird.getPos()[0], flappyBird
-                        .getPos()[1],
-                scaled_parameters[0],
-                scaled_parameters[1], null);
     }
 
     private void gamePause() {
@@ -173,6 +157,26 @@ public class Game extends JPanel implements MouseListener {
     }
 
     // HELPER FUNCTIONS---------------------------------------------------------
+
+    private void drawBird(Graphics graphics) {
+        BufferedImage bird_img = null;
+
+        // Load bird img
+        try {
+            bird_img = ImageIO.read(new File("src" + File.separator +
+                    "resources" + File.separator + "bird.png"));
+        } catch (IOException e) {
+            System.out.print("Bird exception handled");
+        }
+
+        // Draw bird img
+        int[] scaled_parameters = flappyBird.getImg_dimensions();
+
+        graphics.drawImage(bird_img, flappyBird.getPos()[0], flappyBird
+                        .getPos()[1],
+                scaled_parameters[0],
+                scaled_parameters[1], null);
+    }
 
     private void resetBird(Graphics graphics) {
         // Reset current bird
