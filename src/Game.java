@@ -1,14 +1,12 @@
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseEvent;
-import java.awt.image.BufferedImage;
-import java.awt.image.ImageObserver;
-import java.io.File;
-import java.lang.*;
-import java.io.IOException;
 
 /**
  * Created by Sayan Faraz on 2016-01-11.
@@ -189,10 +187,10 @@ public class Game extends JPanel implements MouseListener {
     private void resetBird(Graphics graphics) {
         // Reset current bird
         graphics.setColor(new Color(194, 217, 239));
-        graphics.fillRect(flappyBird.getPrev_pos()[0] - 4,
-                flappyBird.getPrev_pos()[1] - 2,
-                flappyBird.getImg_dimensions()[0] + 8,
-                flappyBird.getImg_dimensions()[1] + 7);
+        graphics.fillRect(flappyBird.getPrev_pos()[0],
+                flappyBird.getPrev_pos()[1],
+                flappyBird.getImg_dimensions()[0],
+                flappyBird.getImg_dimensions()[1]);
     }
 
 
