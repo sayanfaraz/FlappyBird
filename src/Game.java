@@ -17,12 +17,14 @@ public class Game extends JPanel implements MouseListener {
 
     private int game_play; // 0 for home screen, 1 for play, 2 for pause
     private boolean entering_game_play; // new game?
+    private FlappyBird flappyBird;
 
     public Game() {
         super();
 
         game_play = 0; // init at home screen
         entering_game_play = true; // on play press, will make new game
+        flappyBird = new FlappyBird(); // init Flappy Bird
     }
 
     // INITIALIZE UI
@@ -113,7 +115,9 @@ public class Game extends JPanel implements MouseListener {
 
         // Draw bird img
         int[] scaled_parameters = scaleBirdInts(10);
-        graphics.drawImage(bird_img, 30, 40, scaled_parameters[0],
+        graphics.drawImage(bird_img, flappyBird.getPos()[0], flappyBird
+                        .getPos()[1],
+                scaled_parameters[0],
                 scaled_parameters[1], null);
     }
 
@@ -155,6 +159,12 @@ public class Game extends JPanel implements MouseListener {
                 game_play = 1;
                 repaint();
             }
+        }
+        // Is it play screen?
+        else if (game_play == 1) {
+            // Move bird up
+            flappyBird.moveUp();
+            repaint();
         }
     }
 

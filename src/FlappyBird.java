@@ -43,7 +43,7 @@ public class FlappyBird {
 
         int[] new_pos = curr_pos;
 
-        new_pos[1] += 5;
+        new_pos[1] -= 5;
 
         this.setPos(new_pos);
     }
@@ -53,7 +53,7 @@ public class FlappyBird {
 
         int[] new_pos = curr_pos;
 
-        new_pos[1] -= 5;
+        new_pos[1] += 5;
     }
 
 
