@@ -82,11 +82,12 @@ public class Game extends JPanel implements MouseListener {
             case 1:
                 // New game? Need a fresh canvas to draw on
                 if (entering_game_play) {
+                    // Draw Canvas
                     graphics.setColor(new Color(194, 217, 239));
                     graphics.fillRect(0, 0, 1500, 1000);
 
                     // Game started, so set entering_game_play to false so that
-                    // canvas isn't redrawn
+                    //      canvas isn't redrawn
                     entering_game_play = false;
                 }
                 gameEngine(graphics);
@@ -105,6 +106,9 @@ public class Game extends JPanel implements MouseListener {
     // GAME ENGINE--------------------------------------------------------------
 
     private void gameEngine(Graphics graphics) {
+        // Draw obstacles
+        drawObstacles(graphics);
+        
         // Draw bird
         resetBird(graphics);
         drawBird(graphics);
@@ -157,8 +161,20 @@ public class Game extends JPanel implements MouseListener {
         }
     }
 
-    // HELPER FUNCTIONS---------------------------------------------------------
+    // GRAPHICS HELPER FUNCTIONS------------------------------------------------
 
+    // OBSTACLES
+    private void drawObstacles(Graphics graphics) {
+        // For each obstacle in obstacle-stack
+        for (Obstacle obstacle : engine.getObstacle_stack()) {
+            // Draw Obstacle
+            graphics.setColor(obstacle.getColor());
+            graphics.fillRect(obstacle.getXpos(), 0, obstacle.getWidth(),
+                    100);
+        }
+    }
+
+    // BIRD
     private void clickBird() {
         engine.getFlappyBird().clickBird();
         repaint();
@@ -178,8 +194,8 @@ public class Game extends JPanel implements MouseListener {
         // Draw bird img
         int[] scaled_parameters = engine.getFlappyBird().getImg_dimensions();
 
-        graphics.drawImage(bird_img, engine.getFlappyBird().getPos()[0], engine.getFlappyBird()
-                        .getPos()[1],
+        graphics.drawImage(bird_img, engine.getFlappyBird().getPos()[0],
+                engine.getFlappyBird().getPos()[1],
                 scaled_parameters[0],
                 scaled_parameters[1], null);
     }

@@ -4,11 +4,11 @@ import java.awt.*;
  * Created by Sayan Faraz on 2016-01-11.
  */
 public class Obstacle {
-    int xpos; // leftmost pos of obstacle
-    boolean orientation;  // is obstacle coming from the top or the bottom?
-    int dist_from_origin;  // distance of obstacle to origin
-    int width;  // width of obstacle
-    Color color; // color of obstacle
+    private int xpos; // leftmost pos of obstacle
+    private boolean orientation;  // is obstacle coming from the top or the bottom?
+    private int dist_from_origin;  // distance of obstacle to origin
+    private int width;  // width of obstacle
+    private Color color; // color of obstacle
 
     public Obstacle(int xpos, boolean orientation, int dist_from_origin,
                     int width, int[] rgb) {
@@ -55,5 +55,15 @@ public class Obstacle {
         this.width = width;
     }
 
+    public Color getColor() {
+        Color ret_color = new Color(color.getRed(), color.getGreen(),
+                color.getBlue());
+        return ret_color;
+    }
 
+    public void setColor(Color input_color) {
+        Color new_color = new Color(input_color.getRed(), input_color.getGreen()
+                , input_color.getBlue());
+        this.color = new_color;
+    }
 }

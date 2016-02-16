@@ -10,7 +10,7 @@ public class Engine {
     FlappyBird flappyBird; // FlappyBird
 
     // CONSTRAINTS
-    private static int[] beginning_constraints = new int[]{15, 30, 50, 100};
+    private static int[] beginning_constraints = new int[]{150, 300, 50, 100};
     // beginning constraints for obstacles
     private static ArrayList<int[]> colour_wheel = new ArrayList<>(Arrays
             .asList(new int[]{241, 101, 76}, // orange
