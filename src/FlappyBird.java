@@ -1,6 +1,3 @@
-import com.sun.org.apache.bcel.internal.generic.RET;
-
-import javax.sound.sampled.ReverbType;
 
 /**
  * Created by Sayan Faraz on 2016-01-11.
@@ -30,9 +27,7 @@ public class FlappyBird {
         int x = this.pos[0];
         int y = this.pos[1];
 
-        int[] ret_pos = new int[]{x, y};
-
-        return ret_pos;
+        return new int[]{x, y};
     }
 
     public void setPos(int[] pos) {
@@ -41,8 +36,7 @@ public class FlappyBird {
         int new_pos_x = pos[0];
         int new_pos_y = pos[1];
 
-        int[] new_pos = new int[]{new_pos_x, new_pos_y};
-        this.pos = new_pos;
+        this.pos = new int[]{new_pos_x, new_pos_y};
     }
 
 
@@ -50,26 +44,21 @@ public class FlappyBird {
         int x = this.prev_pos[0];
         int y = this.prev_pos[1];
 
-        int[] ret_pos = new int[]{x, y};
-
-        return ret_pos;
+        return new int[]{x, y};
     }
 
     public void setPrev_pos(int[] prev_pos_in) {
         int prev_pos_x = prev_pos_in[0];
         int prev_pos_y = prev_pos_in[1];
-        int[] new_prev_pos = new int[]{prev_pos_x, prev_pos_y};
-        this.prev_pos = new_prev_pos;
+        this.prev_pos = new int[]{prev_pos_x, prev_pos_y};
     }
 
     public boolean isAlive() {
-        boolean ret_bool = this.alive;
-        return ret_bool;
+        return this.alive;
     }
 
     public void setAlive(boolean alive) {
-        boolean new_bool = alive;
-        this.alive = new_bool;
+        this.alive = alive;
     }
 
 
@@ -78,9 +67,7 @@ public class FlappyBird {
         int x = this.img_dimensions[0];
         int y = this.img_dimensions[1];
 
-        int[] ret_list = new int[]{x, y};
-
-        return ret_list;
+        return new int[]{x, y};
     }
 
     public void setImg_dimensions(int[] img_dimensions) {
@@ -88,24 +75,18 @@ public class FlappyBird {
         int x = img_dimensions[0];
         int y = img_dimensions[1];
 
-        int[] new_img_dimensions = new int[]{x, y};
-
-        this.img_dimensions = new_img_dimensions;
+        this.img_dimensions = new int[]{x, y};
     }
 
 
     public float getFall_time() {
 
-        float ret_float = this.fall_time;
-
-        return ret_float;
+        return this.fall_time;
     }
 
     public void setFall_time(float fall_time) {
 
-        float new_fall_time = fall_time;
-
-        this.fall_time = new_fall_time;
+        this.fall_time = fall_time;
     }
 
 
@@ -159,31 +140,23 @@ public class FlappyBird {
     // RELATIVE POS
 
     public boolean onXObstacle(Obstacle obstacle) {
-        if (this.pos[0] >= obstacle.getXpos()
-                && this.pos[0] <= obstacle.getXpos() + obstacle.getWidth()) {
-            return true;
-        } else return false;
+        return this.pos[0] >= obstacle.getXpos()
+                && this.pos[0] <= obstacle.getXpos() + obstacle.getWidth();
     }
 
     public boolean onYObstacle(Obstacle obstacle) {
         // If obstacle is oriented up
         if (obstacle.isOrientatedUp()) {
-            if (this.pos[1] >= obstacle.getDist_from_origin()) {
-                return true;
-            } else return false;
+            return this.pos[1] >= obstacle.getDist_from_origin();
         }
         // If obstacle is oriented down
         else {
-            if (this.pos[1] <= -1 * obstacle.getDist_from_origin()) {
-                return true;
-            } else return false;
+            return this.pos[1] <= -1 * obstacle.getDist_from_origin();
         }
     }
 
     public boolean insideObstacle(Obstacle obstacle) {
-        if (this.onXObstacle(obstacle) && this.onYObstacle(obstacle)) {
-            return true;
-        } else return false;
+        return this.onXObstacle(obstacle) && this.onYObstacle(obstacle);
     }
 
     // BASIC GAME FUNCTIONALITY
@@ -195,9 +168,8 @@ public class FlappyBird {
     }
 
     public void moveUp(int amount) {
-        int[] curr_pos = this.getPos();
 
-        int[] new_pos = curr_pos;
+        int[] new_pos = this.getPos();
 
         new_pos[1] -= amount;
 
@@ -209,9 +181,8 @@ public class FlappyBird {
     }
 
     public void moveDown(int amount) {
-        int[] curr_pos = this.getPos();
 
-        int[] new_pos = curr_pos;
+        int[] new_pos = this.getPos();
 
         new_pos[1] += amount;
 

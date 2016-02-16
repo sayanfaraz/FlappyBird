@@ -1,6 +1,4 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.IllegalFormatCodePointException;
 
 /**
  * Created by Sayan Faraz on 2016-01-22.
@@ -103,8 +101,7 @@ public class Engine {
      */
     private static boolean is_format_constraints(int[] constraints) {
         // Is length=4? Is small_x < large_x? Is small_height < large_height?
-        if (constraints.length==4 && constraints[0] < constraints[1] &&
-                constraints[2] < constraints[3]) return true;
-        else return false;
+        return constraints.length == 4 && constraints[0] < constraints[1] &&
+                constraints[2] < constraints[3];
     }
 }
