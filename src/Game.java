@@ -34,7 +34,7 @@ public class Game extends JPanel implements MouseListener {
         entering_game_play = true; // on play press, will make new game
 
         // Init engine
-        engine = new Engine();
+        engine = new Engine(window_width);
     }
 
     public Game() {

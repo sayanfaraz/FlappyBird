@@ -10,7 +10,7 @@ public class Engine {
     FlappyBird flappyBird; // FlappyBird
 
     // CONSTRAINTS
-    private static int[] beginning_constraints = new int[]{150, 500, 100, 500};
+    private static int[] beginning_constraints = new int[]{500, 100, 500};
     // beginning constraints for obstacles
     private static ArrayList<int[]> colour_wheel = new ArrayList<>(Arrays
             .asList(new int[]{241, 101, 76}, // orange
@@ -19,10 +19,10 @@ public class Engine {
                     new int[]{50, 109, 101}, // green
                     new int[]{95, 55, 194})); // purple
 
-    public Engine() {
+    public Engine(int window_width) {
         // Add 3 columns of obstacles for the beginning
         obstacle_stack = new ArrayList<>();
-        this.add_Multiple_Obstacles(3, beginning_constraints);
+        this.populate_Obstacles(window_width, beginning_constraints);
 
         // Make Flappy bird
         flappyBird = new FlappyBird();
@@ -87,17 +87,18 @@ public class Engine {
      * Given number of obstacles, list of parameters, return a list of
      * random Obstacles.
      * @param num_of_obstacles {int} Number of obstacles
-     * @param constraints {int[]} Array of constraints, 4 parameters
+     * @param constraints {int[]} Array of constraints, 3 parameters: x-gap,
+     *                    min-height, max-height
      * @return {ArrayList} List of obstacles
      */
     public static ArrayList<Obstacle> make_Multiple_Obstacles
-    (int num_of_obstacles, int[] constraints) {
+    (int num_of_obstacles, int beginning_pos, int[] constraints) {
 
         // Check if constraints is formatted properly
         if (is_format_constraints(constraints)) {
 
             // Set current_pos
-            int current_pos = constraints[0];
+            int current_pos = beginning_pos;
 
             // Create obstacles array list
             ArrayList<Obstacle> list_of_Obstacles = new ArrayList<>();
@@ -108,9 +109,9 @@ public class Engine {
                 // So add smallest_x to current_pos
                 list_of_Obstacles.add(0,
                         make_Obstacle(current_pos,
-                                constraints[1] - constraints[0] + current_pos,
-                                constraints[2],
-                                constraints[3]));
+                                constraints[0] + current_pos,
+                                constraints[1],
+                                constraints[2]));
 
                 // New current_pos will be at end of prev block
                 current_pos = list_of_Obstacles.get(0).getXpos() +
@@ -128,25 +129,55 @@ public class Engine {
      * Given number of obstacles, list of parameters, add obstacles to
      * obstacle_stack
      * @param num_of_obstacles {int} Number of obstacles
-     * @param constraints {int[]} Array of constraints, 4 parameters
+     * @param constraints {int[]} Array of constraints, 3 parameters: x-gap,
+     *                    min-height, max-height
      */
-    public void add_Multiple_Obstacles(int num_of_obstacles, int[]
-            constraints) {
+    public void add_Multiple_Obstacles(int num_of_obstacles, int beginning_pos,
+                                       int[] constraints) {
         // Create list of obstacles
         try {
             ArrayList<Obstacle> new_obstacles = make_Multiple_Obstacles
-                    (num_of_obstacles, constraints);
+                    (num_of_obstacles, beginning_pos, constraints);
 
             // Run through each obstacle
             for (int i = 0; i < num_of_obstacles; i++)
                 this.obstacle_stack.add(0, new_obstacles.get(i));
         }
         catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("You need to enter 4 integer " +
+            throw new IllegalArgumentException("You need to enter 3 integer " +
                     "parameters to make an Obstacle.");
         }
+    }
 
+    /**
+     * Given window width, list of parameters, add obstacles to obstacle_stack
+     * until window is full
+     *
+     * @param window_width {int} Window width
+     * @param constraints  {int[]} Array of constraints, 3 parameters: x-gap,
+     *                     min-height, max-height
+     */
+    public void populate_Obstacles(int window_width, int[]
+            constraints) {
+        // Case 1: obstacle list is empty
+        if (this.obstacle_stack.isEmpty()) {
+            // Add first obstacle
+            add_Multiple_Obstacles(1, 150, constraints);
 
+        }
+
+        // Now either way, obstacle list isn't empty
+        // So add obstacles until last obstacle's outside of window
+        int last_pos = obstacle_stack.get(0).getXpos() + obstacle_stack.get
+                (0).getWidth();  // right-most edge of last obstacle
+        while (last_pos < window_width) {
+            // Add an obstacle
+            add_Multiple_Obstacles(1, last_pos, constraints);
+
+            // Update last pos
+            last_pos = obstacle_stack.get(0).getXpos() + obstacle_stack.get
+                    (0).getWidth();
+        }
     }
     // HELPER FUNCTIONS---------------------------------------------------------
     /**
@@ -155,8 +186,8 @@ public class Engine {
      * @return {boolean}
      */
     private static boolean is_format_constraints(int[] constraints) {
-        // Is length=4? Is small_x < large_x? Is small_height < large_height?
-        return constraints.length == 4 && constraints[0] < constraints[1] &&
-                constraints[2] < constraints[3];
+        // Is length=3? Is gap > 0? Is small_height < large_height?
+        return constraints.length == 3 && constraints[0] > 0 &&
+                constraints[1] < constraints[2];
     }
 }
