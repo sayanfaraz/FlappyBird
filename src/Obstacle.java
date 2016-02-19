@@ -6,7 +6,7 @@ import java.awt.*;
 public class Obstacle {
     private int xpos; // leftmost pos of obstacle
     private boolean orientation;  // is obstacle coming from the top or the bottom?
-    private int height;  // distance of obstacle to origin
+    private int height;  // height
     private int width;  // width of obstacle
     private Color color; // color of obstacle
 

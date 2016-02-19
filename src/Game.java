@@ -17,12 +17,28 @@ public class Game extends JPanel implements MouseListener {
     private boolean entering_game_play; // new game?
     private Engine engine;
 
-    public Game() {
+    // Window
+    private int window_width;
+    private int window_height;
+
+    // CONSTRUCTORS-------------------------------------------------------------
+    public Game(int width, int height) {
         super();
 
+        // Set window dims
+        window_height = height;
+        window_width = width;
+
+        // Set gameplay booleans
         game_play = 0; // init at home screen
         entering_game_play = true; // on play press, will make new game
-        engine = new Engine(); // init engine
+
+        // Init engine
+        engine = new Engine();
+    }
+
+    public Game() {
+        this(1500, 1000); // Default window: 1500 * 1000
     }
 
     // INITIALIZE UI
@@ -30,7 +46,7 @@ public class Game extends JPanel implements MouseListener {
 
         // Set JFrame Appearance
         jframe.setTitle("Flappy Bird"); // title
-        jframe.setSize(1500, 1000); // size of window
+        jframe.setSize(window_width, window_height); // size of window
         jframe.setLocationRelativeTo(null);
         jframe.setBackground(new Color(194, 217, 239)); // background colour;
 
@@ -167,10 +183,21 @@ public class Game extends JPanel implements MouseListener {
     private void drawObstacles(Graphics graphics) {
         // For each obstacle in obstacle-stack
         for (Obstacle obstacle : engine.getObstacle_stack()) {
-            // Draw Obstacle
+            // DRAW OBSTACLE
+            // Set color
             graphics.setColor(obstacle.getColor());
-            graphics.fillRect(obstacle.getXpos(), 0, obstacle.getWidth(),
-                    obstacle.getHeight());
+
+            // Check orientation
+            if (obstacle.isOrientatedUp()) {  // if oriented upwards
+                // Draw obstacle from top
+                graphics.fillRect(obstacle.getXpos(), 0, obstacle.getWidth(),
+                        obstacle.getHeight());
+            } else {
+                // Draw obstacle from bottom
+                int ypos = window_height - obstacle.getHeight();
+                graphics.fillRect(obstacle.getXpos(), ypos,
+                        obstacle.getWidth(), obstacle.getHeight());
+            }
         }
     }
 
