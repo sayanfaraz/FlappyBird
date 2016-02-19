@@ -6,16 +6,16 @@ import java.awt.*;
 public class Obstacle {
     private int xpos; // leftmost pos of obstacle
     private boolean orientation;  // is obstacle coming from the top or the bottom?
-    private int dist_from_origin;  // distance of obstacle to origin
+    private int height;  // distance of obstacle to origin
     private int width;  // width of obstacle
     private Color color; // color of obstacle
 
-    public Obstacle(int xpos, boolean orientation, int dist_from_origin,
+    public Obstacle(int xpos, boolean orientation, int height,
                     int width, int[] rgb) {
         if (rgb.length == 3) {
             this.xpos = xpos;
             this.orientation = orientation;
-            this.dist_from_origin = dist_from_origin;
+            this.height = height;
             this.width = width;
             this.color = new Color(rgb[0], rgb[1], rgb[2]);
         } else throw new IllegalArgumentException();
@@ -39,12 +39,12 @@ public class Obstacle {
         this.orientation = orientation;
     }
 
-    public int getDist_from_origin() {
-        return dist_from_origin;
+    public int getHeight() {
+        return height;
     }
 
-    public void setDist_from_origin(int dist) {
-        this.dist_from_origin = dist;
+    public void setHeight(int dist) {
+        this.height = dist;
     }
 
     public int getWidth() {
@@ -56,14 +56,12 @@ public class Obstacle {
     }
 
     public Color getColor() {
-        Color ret_color = new Color(color.getRed(), color.getGreen(),
+        return new Color(color.getRed(), color.getGreen(),
                 color.getBlue());
-        return ret_color;
     }
 
     public void setColor(Color input_color) {
-        Color new_color = new Color(input_color.getRed(), input_color.getGreen()
+        this.color = new Color(input_color.getRed(), input_color.getGreen()
                 , input_color.getBlue());
-        this.color = new_color;
     }
 }

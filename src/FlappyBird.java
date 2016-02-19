@@ -147,11 +147,11 @@ public class FlappyBird {
     public boolean onYObstacle(Obstacle obstacle) {
         // If obstacle is oriented up
         if (obstacle.isOrientatedUp()) {
-            return this.pos[1] >= obstacle.getDist_from_origin();
+            return this.pos[1] >= obstacle.getHeight();
         }
         // If obstacle is oriented down
         else {
-            return this.pos[1] <= -1 * obstacle.getDist_from_origin();
+            return this.pos[1] <= -1 * obstacle.getHeight();
         }
     }
 

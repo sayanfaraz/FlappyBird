@@ -10,7 +10,7 @@ public class Engine {
     FlappyBird flappyBird; // FlappyBird
 
     // CONSTRAINTS
-    private static int[] beginning_constraints = new int[]{150, 300, 50, 100};
+    private static int[] beginning_constraints = new int[]{150, 500, 100, 500};
     // beginning constraints for obstacles
     private static ArrayList<int[]> colour_wheel = new ArrayList<>(Arrays
             .asList(new int[]{241, 101, 76}, // orange
@@ -61,19 +61,24 @@ public class Engine {
      */
     public static Obstacle make_Obstacle(int small_x, int large_x,
                                          int small_height, int large_height) {
-        // Choose random stats
+        // CHOOSE RANDOM STATS
+        // Random position
         int rand_x = (int)(Math.random()*(large_x - small_x)) + small_x;
-        int rand_height = (int)(Math.random()*(large_height - small_height))
-                + small_height;
 
+        // Random width, height
+        int rand_height = (int) (Math.random() * (large_height - small_height)
+                + small_height);
+        System.out.println("Height = " + rand_height);
+        int rand_width = (int) (Math.random() * 100 + 50);
+
+        // Random orientation
         int temp_bool = (int)(Math.round(Math.random()));
         boolean rand_orientation = (temp_bool==1);
 
-        int rand_width = (int)(Math.random()*100 + 50);
-
+        // Random Color
         int rand_color = (int) (Math.random() * 5);
 
-        // Init Obstacle based on random stats
+        // INIT OBSTACLE BASED ON RANDOM STATS
         return new Obstacle(rand_x, rand_orientation, rand_height,
                 rand_width, Engine.colour_wheel.get(rand_color));
     }
@@ -91,13 +96,25 @@ public class Engine {
         // Check if constraints is formatted properly
         if (is_format_constraints(constraints)) {
 
+            // Set current_pos
+            int current_pos = constraints[0];
+
             // Create obstacles array list
             ArrayList<Obstacle> list_of_Obstacles = new ArrayList<>();
 
             // Create obstacles
             for (int i = 0; i < num_of_obstacles; i++) {
-                list_of_Obstacles.add(0,make_Obstacle(constraints[0],
-                        constraints[1], constraints[2], constraints[3]));
+                // Need to make sure that each block doesn't overlap with next
+                // So add smallest_x to current_pos
+                list_of_Obstacles.add(0,
+                        make_Obstacle(current_pos,
+                                constraints[1] - constraints[0] + current_pos,
+                                constraints[2],
+                                constraints[3]));
+
+                // New current_pos will be at end of prev block
+                current_pos = list_of_Obstacles.get(0).getXpos() +
+                        list_of_Obstacles.get(0).getWidth();
             }
 
             // Return Constraints list

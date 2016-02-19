@@ -97,10 +97,10 @@ public class Game extends JPanel implements MouseListener {
                 gamePause();
         }
 
-        System.out.println("x: " + engine.getFlappyBird().getPos()[0]
-                + " y: " + engine.getFlappyBird().getPos()[1]
-                + "    prevx: " + engine.getFlappyBird().getPrev_pos()[0]
-                + " prevy: " + engine.getFlappyBird().getPrev_pos()[1]);
+//        System.out.println("x: " + engine.getFlappyBird().getPos()[0]
+//                + " y: " + engine.getFlappyBird().getPos()[1]
+//                + "    prevx: " + engine.getFlappyBird().getPrev_pos()[0]
+//                + " prevy: " + engine.getFlappyBird().getPrev_pos()[1]);
     }
 
     // GAME ENGINE--------------------------------------------------------------
@@ -170,7 +170,7 @@ public class Game extends JPanel implements MouseListener {
             // Draw Obstacle
             graphics.setColor(obstacle.getColor());
             graphics.fillRect(obstacle.getXpos(), 0, obstacle.getWidth(),
-                    100);
+                    obstacle.getHeight());
         }
     }
 
