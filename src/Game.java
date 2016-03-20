@@ -11,6 +11,10 @@ import javax.swing.*;
 /**
  * Created by Sayan Faraz on 2016-01-11.
  */
+
+//TODO: create obstacles coming from the bottom
+// TODO: document all classes and functions
+
 public class Game extends JPanel implements MouseListener {
 
     private int game_play; // 0 for home screen, 1 for play, 2 for pause
@@ -34,7 +38,7 @@ public class Game extends JPanel implements MouseListener {
         entering_game_play = true; // on play press, will make new game
 
         // Init engine
-        engine = new Engine(window_width);
+        engine = new Engine(window_width, window_height);
     }
 
     public Game() {
