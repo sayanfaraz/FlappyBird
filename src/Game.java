@@ -132,16 +132,7 @@ public class Game extends JPanel implements MouseListener {
     private void gameEngine(Graphics graphics) {
         currDate = new Date();
 
-        // Draw obstacles
-        drawObstacles(graphics);
-        
-        // Draw bird
         resetBird(graphics);
-        drawBird(graphics);
-
-        // Make flappy bird fall
-        engine.getFlappyBird().fall();
-        repaint();
 
         // Move obstacles to the left every 0.5 secs
         if(currDate.getTime() - prevDate.getTime() > 500) {
@@ -150,6 +141,13 @@ public class Game extends JPanel implements MouseListener {
 
             prevDate = new Date();
         }
+
+        drawObstacles(graphics);
+
+        drawBird(graphics);
+        engine.getFlappyBird().fall();
+
+        repaint();
     }
 
     private void gamePause() {
