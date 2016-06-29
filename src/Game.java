@@ -1,6 +1,9 @@
+import com.sun.corba.se.impl.orbutil.graph.Graph;
+
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.font.GraphicAttribute;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -17,28 +20,28 @@ import javax.swing.*;
 
 public class Game extends JPanel implements MouseListener {
 
-    private int game_play; // 0 for home screen, 1 for play, 2 for pause
-    private boolean entering_game_play; // new game?
+    private int gamePlay; // 0 for home screen, 1 for play, 2 for pause
+    private boolean enteringGamePlay; // new game?
     private Engine engine;
 
     // Window
-    private int window_width;
-    private int window_height;
+    private int windowWidth;
+    private int windowHeight;
 
     // CONSTRUCTORS-------------------------------------------------------------
     public Game(int width, int height) {
         super();
 
         // Set window dims
-        window_height = height;
-        window_width = width;
+        windowHeight = height;
+        windowWidth = width;
 
         // Set gameplay booleans
-        game_play = 0; // init at home screen
-        entering_game_play = true; // on play press, will make new game
+        gamePlay = 0; // init at home screen
+        enteringGamePlay = true; // on play press, will make new game
 
         // Init engine
-        engine = new Engine(window_width, window_height);
+        engine = new Engine(windowWidth, windowHeight);
     }
 
     public Game() {
@@ -50,7 +53,7 @@ public class Game extends JPanel implements MouseListener {
 
         // Set JFrame Appearance
         jframe.setTitle("Flappy Bird"); // title
-        jframe.setSize(window_width, window_height); // size of window
+        jframe.setSize(windowWidth, windowHeight); // size of window
         jframe.setLocationRelativeTo(null);
         jframe.setBackground(new Color(194, 217, 239)); // background colour;
 
@@ -93,22 +96,22 @@ public class Game extends JPanel implements MouseListener {
     public void paintComponent(Graphics graphics) {
 
         // Home Screen, Play, Pause
-        switch (game_play) {
+        switch (gamePlay) {
             // Home Screen
             case 0:
-                entering_game_play = true;
+                enteringGamePlay = true;
                 homeScreen(graphics);
                 break;
             case 1:
                 // New game? Need a fresh canvas to draw on
-                if (entering_game_play) {
+                if (enteringGamePlay) {
                     // Draw Canvas
                     graphics.setColor(new Color(194, 217, 239));
                     graphics.fillRect(0, 0, 1500, 1000);
 
                     // Game started, so set entering_game_play to false so that
                     //      canvas isn't redrawn
-                    entering_game_play = false;
+                    enteringGamePlay = false;
                 }
                 gameEngine(graphics);
                 break;
@@ -127,6 +130,7 @@ public class Game extends JPanel implements MouseListener {
 
     private void gameEngine(Graphics graphics) {
         // Draw obstacles
+        resetObstacles(graphics);
         drawObstacles(graphics);
         
         // Draw bird
@@ -136,10 +140,13 @@ public class Game extends JPanel implements MouseListener {
         // Make flappy bird fall
         engine.getFlappyBird().fall();
         repaint();
+
+        // Move obstacles to the left
+        engine.moveObstacleStackToLeft(5);
     }
 
     private void gamePause() {
-        game_play = 0;
+        gamePlay = 0;
     }
 
     // MOUSE LISTENERS----------------------------------------------------------
@@ -166,17 +173,17 @@ public class Game extends JPanel implements MouseListener {
 
         // PLAY BUTTON
         // Is home screen?
-        if (game_play == 0) {
+        if (gamePlay == 0) {
 
             // Did mouse press Play button?
             if (x > 512 && x < 989 && y > 719 && y < 829) {
                 // Game's starting :O
-                game_play = 1;
+                gamePlay = 1;
                 repaint();
             }
         }
         // Is it play screen?
-        else if (game_play == 1) {
+        else if (gamePlay == 1) {
             clickBird();
         }
     }
@@ -186,7 +193,7 @@ public class Game extends JPanel implements MouseListener {
     // OBSTACLES
     private void drawObstacles(Graphics graphics) {
         // For each obstacle in obstacle-stack
-        for (Obstacle obstacle : engine.getObstacle_stack()) {
+        for (Obstacle obstacle : engine.getObstacleStack()) {
             // DRAW OBSTACLE
             // Set color
             graphics.setColor(obstacle.getColor());
@@ -198,7 +205,27 @@ public class Game extends JPanel implements MouseListener {
                         obstacle.getHeight());
             } else {
                 // Draw obstacle from bottom
-                int ypos = window_height - obstacle.getHeight();
+                int ypos = windowHeight - obstacle.getHeight();
+                graphics.fillRect(obstacle.getXpos(), ypos,
+                        obstacle.getWidth(), obstacle.getHeight());
+            }
+        }
+    }
+
+    private void resetObstacles(Graphics graphics) {
+        // For each obstacle in obstacle stack
+        for(Obstacle obstacle: engine.getObstacleStack()) {
+            // REPAINT THAT OBSTACLE IN BLUE
+            graphics.setColor(new Color(194, 217, 239));
+
+            // Check orientation
+            if (obstacle.isOrientatedUp()) {  // if oriented upwards
+                // Draw obstacle from top
+                graphics.fillRect(obstacle.getXpos(), 0, obstacle.getWidth(),
+                        obstacle.getHeight());
+            } else {
+                // Draw obstacle from bottom
+                int ypos = windowHeight - obstacle.getHeight();
                 graphics.fillRect(obstacle.getXpos(), ypos,
                         obstacle.getWidth(), obstacle.getHeight());
             }
@@ -223,7 +250,7 @@ public class Game extends JPanel implements MouseListener {
         }
 
         // Draw bird img
-        int[] scaled_parameters = engine.getFlappyBird().getImg_dimensions();
+        int[] scaled_parameters = engine.getFlappyBird().getImgDimensions();
 
         graphics.drawImage(bird_img, engine.getFlappyBird().getPos()[0],
                 engine.getFlappyBird().getPos()[1],
@@ -234,10 +261,10 @@ public class Game extends JPanel implements MouseListener {
     private void resetBird(Graphics graphics) {
         // Reset current bird
         graphics.setColor(new Color(194, 217, 239));
-        graphics.fillRect(engine.getFlappyBird().getPrev_pos()[0],
-                engine.getFlappyBird().getPrev_pos()[1],
-                engine.getFlappyBird().getImg_dimensions()[0],
-                engine.getFlappyBird().getImg_dimensions()[1]);
+        graphics.fillRect(engine.getFlappyBird().getPrevPos()[0],
+                engine.getFlappyBird().getPrevPos()[1],
+                engine.getFlappyBird().getImgDimensions()[0],
+                engine.getFlappyBird().getImgDimensions()[1]);
     }
 
 

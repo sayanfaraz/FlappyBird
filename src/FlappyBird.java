@@ -5,19 +5,19 @@
 public class FlappyBird {
 
     // VARIABLES----------------------------------------------------------------
-    private int[] prev_pos = new int[2]; // prev pos of FlappyBird
+    private int[] prevPos = new int[2]; // prev pos of FlappyBird
     private int[] pos = new int[2];  // (x,y) position of FlappyBird
     private boolean alive;  // is FlappyBird alive or dead?
-    private int[] img_dimensions = new int[2];
-    private float fall_time; // time that FlappyBird has been falling
+    private int[] imgDimensions = new int[2];
+    private float fallTime; // time that FlappyBird has been falling
 
     public FlappyBird() {
         pos[0] = 50;
         pos[1] = 0;  // set pos to (0,0)
-        img_dimensions = FlappyBird.scaleBirdInts(10);
+        imgDimensions = FlappyBird.scaleBirdInts(10);
 
         alive = true;  // FlappyBird is alive
-        fall_time = 0;
+        fallTime = 0;
     }
 
 
@@ -31,7 +31,7 @@ public class FlappyBird {
     }
 
     public void setPos(int[] pos) {
-        setPrev_pos(this.getPos());
+        setPrevPos(this.getPos());
 
         int new_pos_x = pos[0];
         int new_pos_y = pos[1];
@@ -40,17 +40,17 @@ public class FlappyBird {
     }
 
 
-    public int[] getPrev_pos() {
-        int x = this.prev_pos[0];
-        int y = this.prev_pos[1];
+    public int[] getPrevPos() {
+        int x = this.prevPos[0];
+        int y = this.prevPos[1];
 
         return new int[]{x, y};
     }
 
-    public void setPrev_pos(int[] prev_pos_in) {
+    public void setPrevPos(int[] prev_pos_in) {
         int prev_pos_x = prev_pos_in[0];
         int prev_pos_y = prev_pos_in[1];
-        this.prev_pos = new int[]{prev_pos_x, prev_pos_y};
+        this.prevPos = new int[]{prev_pos_x, prev_pos_y};
     }
 
     public boolean isAlive() {
@@ -62,31 +62,31 @@ public class FlappyBird {
     }
 
 
-    public int[] getImg_dimensions() {
+    public int[] getImgDimensions() {
 
-        int x = this.img_dimensions[0];
-        int y = this.img_dimensions[1];
+        int x = this.imgDimensions[0];
+        int y = this.imgDimensions[1];
 
         return new int[]{x, y};
     }
 
-    public void setImg_dimensions(int[] img_dimensions) {
+    public void setImgDimensions(int[] imgDimensions) {
 
-        int x = img_dimensions[0];
-        int y = img_dimensions[1];
+        int x = imgDimensions[0];
+        int y = imgDimensions[1];
 
-        this.img_dimensions = new int[]{x, y};
+        this.imgDimensions = new int[]{x, y};
     }
 
 
-    public float getFall_time() {
+    public float getFallTime() {
 
-        return this.fall_time;
+        return this.fallTime;
     }
 
-    public void setFall_time(float fall_time) {
+    public void setFallTime(float fallTime) {
 
-        this.fall_time = fall_time;
+        this.fallTime = fallTime;
     }
 
 
@@ -116,14 +116,14 @@ public class FlappyBird {
     // CLICK
     public void clickBird() {
         moveUp(50);
-        fall_time = 0;
+        fallTime = 0;
     }
 
     // FALL
     public void fall() {
-        int fall_distance = (int) (fall_time * fall_time);
+        int fall_distance = (int) (fallTime * fallTime);
         moveDown(fall_distance);
-        fall_time += 0.25;
+        fallTime += 0.25;
     }
 
     // KILL

@@ -6,10 +6,10 @@ import java.util.Arrays;
  */
 public class Engine {
     // VARIABLES
-    private ArrayList<Obstacle> obstacle_stack; // Arraylist of obstacles
+    private ArrayList<Obstacle> obstacleStack; // Arraylist of obstacles
     FlappyBird flappyBird; // FlappyBird
-    int window_height;
-    int window_width;
+    int windowHeight;
+    int windowWidth;
 
     // CONSTRAINTS
     private static int[] beginning_constraints = new int[]{200, 100, 500};
@@ -21,28 +21,28 @@ public class Engine {
                     new int[]{50, 109, 101}, // green
                     new int[]{95, 55, 194})); // purple
 
-    public Engine(int window_width, int window_height) {
+    public Engine(int windowWidth, int windowHeight) {
 
         // Init vars
-        this.window_height = window_height;
-        this.window_width = window_width;
+        this.windowHeight = windowHeight;
+        this.windowWidth = windowWidth;
 
         // Populate obstacle stack
-        obstacle_stack = new ArrayList<>();
-        beginning_constraints[2] = (int) (window_height * 0.4);
-        this.populateObstacles(window_width, beginning_constraints);
+        obstacleStack = new ArrayList<>();
+        beginning_constraints[2] = (int) (windowHeight * 0.4);
+        this.populateObstacleStack(windowWidth, beginning_constraints);
 
         // Make Flappy bird
         flappyBird = new FlappyBird();
     }
     // GETTERS, SETTERS---------------------------------------------------------
 
-    public ArrayList<Obstacle> getObstacle_stack() {
-        return obstacle_stack;
+    public ArrayList<Obstacle> getObstacleStack() {
+        return obstacleStack;
     }
 
-    public void setObstacle_stack(ArrayList<Obstacle> obstacle_stack) {
-        this.obstacle_stack = obstacle_stack;
+    public void setObstacleStack(ArrayList<Obstacle> obstacleStack) {
+        this.obstacleStack = obstacleStack;
     }
 
     public FlappyBird getFlappyBird() {
@@ -100,7 +100,7 @@ public class Engine {
 
         ret_obstacle = new Obstacle(obstacle.getXpos(),
                 !obstacle.isOrientatedUp(),
-                this.window_height - obstacle.getHeight() - 150,
+                this.windowHeight - obstacle.getHeight() - 150,
                 obstacle.getWidth(),
                 Engine.colour_wheel.get(rand_color));
 
@@ -176,7 +176,7 @@ public class Engine {
                     (num_of_obstacles, beginning_pos, constraints);
 
             for (int i = 0; i < num_of_obstacles * 2; i++)
-                this.obstacle_stack.add(0, new_obstacles.get(i));
+                this.obstacleStack.add(0, new_obstacles.get(i));
         } catch (IllegalArgumentException e) {
             throw new IllegalArgumentException("You need to enter 3 integer " +
                     "parameters to make an Obstacle.");
@@ -191,10 +191,10 @@ public class Engine {
      * @param constraints  {int[]} Array of constraints, 3 parameters: x-gap,
      *                     min-height, max-height
      */
-    public void populateObstacles(int window_width, int[]
+    public void populateObstacleStack(int window_width, int[]
             constraints) {
         // Case 1: obstacle list is empty
-        if (this.obstacle_stack.isEmpty()) {
+        if (this.obstacleStack.isEmpty()) {
             // Add first obstacle
             addMultipleObstacles(1, 150, constraints);
 
@@ -202,15 +202,26 @@ public class Engine {
 
         // Now either way, obstacle list isn't empty
         // So add obstacles until last obstacle's outside of window
-        int last_pos = obstacle_stack.get(0).getXpos() + obstacle_stack.get
+        int last_pos = obstacleStack.get(0).getXpos() + obstacleStack.get
                 (0).getWidth();  // right-most edge of last obstacle
         while (last_pos < window_width) {
             // Add an obstacle
             addMultipleObstacles(1, last_pos, constraints);
 
             // Update last pos
-            last_pos = obstacle_stack.get(0).getXpos() + obstacle_stack.get
+            last_pos = obstacleStack.get(0).getXpos() + obstacleStack.get
                     (0).getWidth();
+        }
+    }
+
+    /**
+     * Move obstacles in obstacle stack to the left by specified amount
+     * @param amountToMove {int} Amount to move obstacles by
+     */
+    public void moveObstacleStackToLeft(int amountToMove) {
+        for (Obstacle obstacle :
+                obstacleStack) {
+            obstacle.setXpos(obstacle.getXpos() - amountToMove);
         }
     }
     // HELPER FUNCTIONS---------------------------------------------------------
