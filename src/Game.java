@@ -1,12 +1,10 @@
-import com.sun.corba.se.impl.orbutil.graph.Graph;
-
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.font.GraphicAttribute;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -23,6 +21,7 @@ public class Game extends JPanel implements MouseListener {
     private int gamePlay; // 0 for home screen, 1 for play, 2 for pause
     private boolean enteringGamePlay; // new game?
     private Engine engine;
+    private Date currDate, prevDate;
 
     // Window
     private int windowWidth;
@@ -42,6 +41,8 @@ public class Game extends JPanel implements MouseListener {
 
         // Init engine
         engine = new Engine(windowWidth, windowHeight);
+        currDate = new Date();
+        prevDate = new Date();
     }
 
     public Game() {
@@ -129,8 +130,9 @@ public class Game extends JPanel implements MouseListener {
     // GAME ENGINE--------------------------------------------------------------
 
     private void gameEngine(Graphics graphics) {
+        currDate = new Date();
+
         // Draw obstacles
-        resetObstacles(graphics);
         drawObstacles(graphics);
         
         // Draw bird
@@ -141,8 +143,13 @@ public class Game extends JPanel implements MouseListener {
         engine.getFlappyBird().fall();
         repaint();
 
-        // Move obstacles to the left
-        engine.moveObstacleStackToLeft(5);
+        // Move obstacles to the left every 0.5 secs
+        if(currDate.getTime() - prevDate.getTime() > 500) {
+            resetObstacles(graphics);
+            engine.moveObstacleStackToLeft(50);
+
+            prevDate = new Date();
+        }
     }
 
     private void gamePause() {
@@ -179,6 +186,8 @@ public class Game extends JPanel implements MouseListener {
             if (x > 512 && x < 989 && y > 719 && y < 829) {
                 // Game's starting :O
                 gamePlay = 1;
+                currDate = new Date();
+                prevDate = new Date();
                 repaint();
             }
         }

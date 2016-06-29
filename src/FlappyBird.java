@@ -123,7 +123,7 @@ public class FlappyBird {
     public void fall() {
         int fall_distance = (int) (fallTime * fallTime);
         moveDown(fall_distance);
-        fallTime += 0.25;
+        fallTime += 0.1;
     }
 
     // KILL
