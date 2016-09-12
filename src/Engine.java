@@ -58,7 +58,7 @@ public class Engine {
 //    public void setFlappyBirdFromCopy(FlappyBird flappyBird) {
 //        this.flappyBird = flappyBird;
 //    }
-
+    // METHODS------------------------------------------------------------------
     /**
      * Given parameters, make a random obstacle.
      *
@@ -222,6 +222,22 @@ public class Engine {
         for (Obstacle obstacle :
                 obstacleStack) {
             obstacle.setXpos(obstacle.getXpos() - amountToMove);
+        }
+    }
+
+    /**
+     * Return true if flappy bird has crashed; else return false.
+     * @return {boolean} Crashed or not?
+     */
+    public void detectFlappyBirdCrashes() {
+
+        // If collision with any obstacle, kill the bird
+        for (Obstacle obstacle :
+                obstacleStack) {
+
+            if(flappyBird.insideObstacle(obstacle)) {
+                flappyBird.kill();
+            }
         }
     }
     // HELPER FUNCTIONS---------------------------------------------------------

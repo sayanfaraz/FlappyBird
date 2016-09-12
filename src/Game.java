@@ -119,6 +119,7 @@ public class Game extends JPanel implements MouseListener {
             // Pause
             case 2:
                 gamePause();
+                break;
         }
 
 //        System.out.println("x: " + engine.getFlappyBird().getPos()[0]
@@ -130,28 +131,44 @@ public class Game extends JPanel implements MouseListener {
     // GAME ENGINE--------------------------------------------------------------
 
     private void gameEngine(Graphics graphics) {
-        currDate = new Date();
 
-        resetBird(graphics);
+        if(engine.getFlappyBird().isAlive()) {
+            currDate = new Date();
 
-        // Move obstacles to the left every 0.5 secs
-        if(currDate.getTime() - prevDate.getTime() > 500) {
-            resetObstacles(graphics);
-            engine.moveObstacleStackToLeft(50);
+            resetBird(graphics);
 
-            prevDate = new Date();
+            // Move obstacles to the left every 0.5 secs
+            if (currDate.getTime() - prevDate.getTime() > 500) {
+                resetObstacles(graphics);
+                engine.moveObstacleStackToLeft(50);
+
+                prevDate = new Date();
+            }
+
+            drawObstacles(graphics);
+
+            drawBird(graphics);
+            engine.getFlappyBird().fall();
+
+            engine.detectFlappyBirdCrashes();
+
+            if(!engine.getFlappyBird().isAlive())
+                gameReset();
+
+            repaint();
         }
-
-        drawObstacles(graphics);
-
-        drawBird(graphics);
-        engine.getFlappyBird().fall();
-
-        repaint();
+        else {
+            gameReset();
+        }
     }
 
     private void gamePause() {
         gamePlay = 0;
+    }
+
+    private void gameReset() {
+        gamePlay = 0;
+        enteringGamePlay = true;
     }
 
     // MOUSE LISTENERS----------------------------------------------------------
