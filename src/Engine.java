@@ -12,7 +12,12 @@ public class Engine {
     int windowWidth;
 
     // CONSTRAINTS
-    private static int[] beginning_constraints = new int[]{200, 100, 500};
+    // Starting array of constraints, 3 parameters: x-gap, min-height,
+    // max-height
+    private static int[] beginning_constraints = new int[]{200, 50, 600};
+    private static int y_gap = 400;
+    private static int starting_obstacle_pos = 300;
+
     // beginning constraints for obstacles
     private static ArrayList<int[]> colour_wheel = new ArrayList<>(Arrays
             .asList(new int[]{241, 101, 76}, // orange
@@ -52,12 +57,7 @@ public class Engine {
     public void setFlappyBird(FlappyBird flappyBird) {
         this.flappyBird = flappyBird;
     }
-//    public FlappyBird getFlappyBirdCopy() {
-//        return flappyBird;
-//    }
-//    public void setFlappyBirdFromCopy(FlappyBird flappyBird) {
-//        this.flappyBird = flappyBird;
-//    }
+
     // METHODS------------------------------------------------------------------
     /**
      * Given parameters, make a random obstacle.
@@ -89,6 +89,13 @@ public class Engine {
                 rand_width, Engine.colour_wheel.get(rand_color));
     }
 
+    /**
+     * Given an obstacle, make another obstacle on the same x pos but with
+     * opposite orientation.
+     *
+     * @param obstacle {Obstacle}
+     * @return {ArrayList<Obstacle>} Pair of obstacles
+     */
     public ArrayList<Obstacle> makeObstaclePair(Obstacle obstacle) {
 
         // Init vars
@@ -100,7 +107,7 @@ public class Engine {
 
         ret_obstacle = new Obstacle(obstacle.getXpos(),
                 !obstacle.isOrientatedUp(),
-                this.windowHeight - obstacle.getHeight() - 150,
+                this.windowHeight - obstacle.getHeight() - y_gap,
                 obstacle.getWidth(),
                 Engine.colour_wheel.get(rand_color));
 
@@ -115,6 +122,7 @@ public class Engine {
      * Obstacles.
      *
      * @param num_of_obstacles {int} Number of obstacles
+     * @param beginning_pos {int} What x pos to start making obstacles from
      * @param constraints      {int[]} Array of constraints, 3 parameters:
      *                         x-gap, min-height, max-height
      * @return {ArrayList} List of obstacles
@@ -196,7 +204,7 @@ public class Engine {
         // Case 1: obstacle list is empty
         if (this.obstacleStack.isEmpty()) {
             // Add first obstacle
-            addMultipleObstacles(1, 150, constraints);
+            addMultipleObstacles(1, starting_obstacle_pos, constraints);
 
         }
 
@@ -235,7 +243,7 @@ public class Engine {
         for (Obstacle obstacle :
                 obstacleStack) {
 
-            if(flappyBird.insideObstacle(obstacle)) {
+            if (flappyBird.insideObstacle(obstacle, y_gap)) {
                 flappyBird.kill();
             }
         }

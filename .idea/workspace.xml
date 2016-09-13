@@ -7,13 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcfdbf3a-ba0d-4a8b-99c2-3c2ace7811d7" name="Default" comment="v0.4.3&#10;&#10;Have both top and bottom obstacles now :D (fixed a really stupid bug D: )">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FlappyBird/FlappyBird.jar" afterPath="$PROJECT_DIR$/out/artifacts/FlappyBird/FlappyBird.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/FlappyBirdTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/Engine.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/Engine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/Game.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/Game.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlappyBird.iml" afterPath="$PROJECT_DIR$/FlappyBird.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Engine.java" afterPath="$PROJECT_DIR$/src/Engine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FlappyBird.java" afterPath="$PROJECT_DIR$/src/FlappyBird.java" />
     </list>
     <ignored path="FlappyBird.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,26 +33,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="FlappyBird.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FlappyBird.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
-              <folding>
-                <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="511">
+              <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="60" column="26" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
                 <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
                 <element signature="method#clickBird#0;class#Game#0" expanded="false" />
                 <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -73,27 +69,9 @@
       <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="231" column="34" selection-start-line="231" selection-start-column="34" selection-end-line="231" selection-end-column="34" />
-              <folding>
-                <element signature="docComment;class#Engine#0" expanded="false" />
-                <element signature="method#setObstacleStack#0;class#Engine#0" expanded="false" />
-                <element signature="method#setFlappyBird#0;class#Engine#0" expanded="false" />
-                <element signature="e#1692#1737#0" expanded="false" />
-                <element signature="docComment;method#makeObstacle#0;class#Engine#0" expanded="false" />
-                <element signature="method#makeObstacle#0;class#Engine#0" expanded="false" />
-                <element signature="e#2469#2491#0" expanded="false" />
-                <element signature="docComment;method#makeMultipleObstacles#0;class#Engine#0" expanded="false" />
-                <element signature="e#4518#4537#0" expanded="false" />
-                <element signature="e#4647#4709#0" expanded="false" />
-                <element signature="docComment;method#addMultipleObstacles#0;class#Engine#0" expanded="false" />
-                <element signature="docComment;method#populateObstacleStack#0;class#Engine#0" expanded="false" />
-                <element signature="e#7198#7242#0" expanded="false" />
-                <element signature="docComment;method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-                <element signature="method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-                <element signature="docComment;method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-                <element signature="method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="490">
+              <caret line="246" column="13" selection-start-line="246" selection-start-column="13" selection-end-line="246" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,8 +79,8 @@
       <file leaf-file-name="Obstacle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Obstacle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="-177">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -114,6 +92,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
@@ -133,9 +112,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Obstacle.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
+        <option value="$PROJECT_DIR$/test/FlappyBirdTest.java" />
         <option value="$PROJECT_DIR$/src/Engine.java" />
         <option value="$PROJECT_DIR$/src/FlappyBird.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
       </list>
     </option>
   </component>
@@ -177,6 +157,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -205,59 +188,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FlappyBird" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FlappyBird" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FlappyBird" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FlappyBird" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Design Files" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="makeo&#9;PSI&#9;JAVA://Engine#makeObstacle" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sayan Faraz\OneDrive\Documents\School Stuff\CompSci Stuff\University\CSC207H1S\Programs\FlappyBird\Design Files" />
       <recent name="C:\Users\Sayan Faraz\OneDrive\Documents\School Stuff\CompSci Stuff\University\CSC207H1S\Programs\FlappyBird\src\resources" />
@@ -699,7 +654,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291039" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -713,7 +668,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39936858" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39888978" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -776,23 +731,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -805,25 +749,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Engine#0" expanded="false" />
-            <element signature="method#setObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="method#setFlappyBird#0;class#Engine#0" expanded="false" />
-            <element signature="e#1692#1737#0" expanded="false" />
-            <element signature="docComment;method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="e#2469#2491#0" expanded="false" />
-            <element signature="docComment;method#makeMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="e#4518#4537#0" expanded="false" />
-            <element signature="e#4647#4709#0" expanded="false" />
-            <element signature="docComment;method#addMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#populateObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="e#7198#7242#0" expanded="false" />
-            <element signature="docComment;method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-            <element signature="method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -839,9 +765,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -851,7 +775,6 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -864,25 +787,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Engine#0" expanded="false" />
-            <element signature="method#setObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="method#setFlappyBird#0;class#Engine#0" expanded="false" />
-            <element signature="e#1692#1737#0" expanded="false" />
-            <element signature="docComment;method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="e#2469#2491#0" expanded="false" />
-            <element signature="docComment;method#makeMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="e#4518#4537#0" expanded="false" />
-            <element signature="e#4647#4709#0" expanded="false" />
-            <element signature="docComment;method#addMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#populateObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="e#7198#7242#0" expanded="false" />
-            <element signature="docComment;method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-            <element signature="method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -898,9 +803,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -910,7 +813,6 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -923,25 +825,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Engine#0" expanded="false" />
-            <element signature="method#setObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="method#setFlappyBird#0;class#Engine#0" expanded="false" />
-            <element signature="e#1692#1737#0" expanded="false" />
-            <element signature="docComment;method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="e#2469#2491#0" expanded="false" />
-            <element signature="docComment;method#makeMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="e#4518#4537#0" expanded="false" />
-            <element signature="e#4647#4709#0" expanded="false" />
-            <element signature="docComment;method#addMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#populateObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="e#7198#7242#0" expanded="false" />
-            <element signature="docComment;method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-            <element signature="method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -957,9 +841,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -969,7 +851,6 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -982,25 +863,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Engine#0" expanded="false" />
-            <element signature="method#setObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="method#setFlappyBird#0;class#Engine#0" expanded="false" />
-            <element signature="e#1692#1737#0" expanded="false" />
-            <element signature="docComment;method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="e#2469#2491#0" expanded="false" />
-            <element signature="docComment;method#makeMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="e#4518#4537#0" expanded="false" />
-            <element signature="e#4647#4709#0" expanded="false" />
-            <element signature="docComment;method#addMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#populateObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="e#7198#7242#0" expanded="false" />
-            <element signature="docComment;method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-            <element signature="method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,9 +879,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,7 +889,6 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -1041,25 +901,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Engine#0" expanded="false" />
-            <element signature="method#setObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="method#setFlappyBird#0;class#Engine#0" expanded="false" />
-            <element signature="e#1692#1737#0" expanded="false" />
-            <element signature="docComment;method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="e#2469#2491#0" expanded="false" />
-            <element signature="docComment;method#makeMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="e#4518#4537#0" expanded="false" />
-            <element signature="e#4647#4709#0" expanded="false" />
-            <element signature="docComment;method#addMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#populateObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="e#7198#7242#0" expanded="false" />
-            <element signature="docComment;method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-            <element signature="method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1075,9 +917,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1087,7 +927,6 @@
           <caret line="107" column="51" selection-start-line="107" selection-start-column="51" selection-end-line="107" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -1100,25 +939,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Engine#0" expanded="false" />
-            <element signature="method#setObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="method#setFlappyBird#0;class#Engine#0" expanded="false" />
-            <element signature="e#1692#1737#0" expanded="false" />
-            <element signature="docComment;method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="e#2469#2491#0" expanded="false" />
-            <element signature="docComment;method#makeMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="e#4518#4537#0" expanded="false" />
-            <element signature="e#4647#4709#0" expanded="false" />
-            <element signature="docComment;method#addMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#populateObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="e#7198#7242#0" expanded="false" />
-            <element signature="docComment;method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-            <element signature="method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,9 +955,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,7 +965,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -1167,9 +985,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1179,7 +995,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -1200,9 +1015,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1212,7 +1025,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -1233,9 +1045,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1245,7 +1055,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -1266,9 +1075,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1278,7 +1085,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
             <element signature="method#clickBird#0;class#Game#0" expanded="false" />
             <element signature="method#drawBird#0;class#Game#0" expanded="false" />
@@ -1331,62 +1137,49 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/FlappyBirdTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="60" column="26" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
+            <element signature="method#clickBird#0;class#Game#0" expanded="false" />
+            <element signature="method#drawBird#0;class#Game#0" expanded="false" />
+            <element signature="method#resetBird#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Obstacle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state relative-caret-position="-177">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="246" column="13" selection-start-line="246" selection-start-column="13" selection-end-line="246" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
-          <folding>
-            <element signature="method#hasCollided#0;class#FlappyBird#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="231" column="34" selection-start-line="231" selection-start-column="34" selection-end-line="231" selection-end-column="34" />
-          <folding>
-            <element signature="docComment;class#Engine#0" expanded="false" />
-            <element signature="method#setObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="method#setFlappyBird#0;class#Engine#0" expanded="false" />
-            <element signature="e#1692#1737#0" expanded="false" />
-            <element signature="docComment;method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="method#makeObstacle#0;class#Engine#0" expanded="false" />
-            <element signature="e#2469#2491#0" expanded="false" />
-            <element signature="docComment;method#makeMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="e#4518#4537#0" expanded="false" />
-            <element signature="e#4647#4709#0" expanded="false" />
-            <element signature="docComment;method#addMultipleObstacles#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#populateObstacleStack#0;class#Engine#0" expanded="false" />
-            <element signature="e#7198#7242#0" expanded="false" />
-            <element signature="docComment;method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="method#moveObstacleStackToLeft#0;class#Engine#0" expanded="false" />
-            <element signature="docComment;method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-            <element signature="method#isFormatConstraints#0;class#Engine#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#drawObstacles#0;class#Game#0" expanded="false" />
-            <element signature="method#resetObstacles#0;class#Game#0" expanded="false" />
-            <element signature="method#clickBird#0;class#Game#0" expanded="false" />
-            <element signature="method#drawBird#0;class#Game#0" expanded="false" />
-            <element signature="method#resetBird#0;class#Game#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="511">
+          <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>

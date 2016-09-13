@@ -144,19 +144,23 @@ public class FlappyBird {
                 && this.pos[0] <= obstacle.getXpos() + obstacle.getWidth();
     }
 
-    public boolean onYObstacle(Obstacle obstacle) {
+    public boolean onYObstacle(Obstacle obstacle, int y_gap) {
         // If obstacle is oriented up
         if (obstacle.isOrientatedUp()) {
-            return this.pos[1] >= obstacle.getHeight();
+            return this.pos[1] <= obstacle.getHeight();
         }
         // If obstacle is oriented down
         else {
-            return this.pos[1] <= -1 * obstacle.getHeight();
+            return this.pos[1] >= obstacle.getHeight() + y_gap;
         }
     }
 
-    public boolean insideObstacle(Obstacle obstacle) {
-        return this.onXObstacle(obstacle) && this.onYObstacle(obstacle);
+    public boolean insideObstacle(Obstacle obstacle, int y_gap) {
+        if (this.onXObstacle(obstacle) && this.onYObstacle(obstacle, y_gap)) {
+            System.out.println("x-hit: " + this.onXObstacle(obstacle));
+            System.out.println("y-hit: " + this.onYObstacle(obstacle, y_gap));
+        }
+        return this.onXObstacle(obstacle) && this.onYObstacle(obstacle, y_gap);
     }
 
     // BASIC GAME FUNCTIONALITY
@@ -189,8 +193,8 @@ public class FlappyBird {
         this.setPos(new_pos);
     }
 
-    public void hasCollided(Obstacle obstacle) {
-        if (this.insideObstacle(obstacle)) {
+    public void hasCollided(Obstacle obstacle, int y_gap) {
+        if (this.insideObstacle(obstacle, y_gap)) {
             this.setAlive(false);
         }
     }
