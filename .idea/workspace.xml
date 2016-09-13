@@ -6,12 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcfdbf3a-ba0d-4a8b-99c2-3c2ace7811d7" name="Default" comment="v0.4.3&#10;&#10;Have both top and bottom obstacles now :D (fixed a really stupid bug D: )">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/FlappyBirdTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/Engine.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/Engine.class" />
+    <list default="true" id="fcfdbf3a-ba0d-4a8b-99c2-3c2ace7811d7" name="Default" comment="v0.4.4&#10;&#10;Can detect whether the bird 'crashes' into the obstacles!">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird.class" afterPath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlappyBird.iml" afterPath="$PROJECT_DIR$/FlappyBird.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Engine.java" afterPath="$PROJECT_DIR$/src/Engine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FlappyBird.java" afterPath="$PROJECT_DIR$/src/FlappyBird.java" />
     </list>
     <ignored path="FlappyBird.iws" />
@@ -36,8 +33,8 @@
       <file leaf-file-name="FlappyBird.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
+            <state relative-caret-position="652">
+              <caret line="186" column="58" selection-start-line="186" selection-start-column="58" selection-end-line="186" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -46,7 +43,7 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="1334">
               <caret line="60" column="26" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -69,8 +66,8 @@
       <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="246" column="13" selection-start-line="246" selection-start-column="13" selection-end-line="246" selection-end-column="13" />
+            <state relative-caret-position="5566">
+              <caret line="247" column="13" selection-start-line="247" selection-start-column="13" selection-end-line="247" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -79,7 +76,7 @@
       <file leaf-file-name="Obstacle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Obstacle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-177">
+            <state relative-caret-position="-38">
               <caret line="7" column="31" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="31" />
               <folding />
             </state>
@@ -158,8 +155,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -194,6 +189,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -645,12 +642,19 @@
       <option name="project" value="LOCAL" />
       <updated>1458446525229</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="v0.4.4&#10;&#10;Can detect whether the bird 'crashes' into the obstacles!">
+      <created>1473801085878</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1473801085879</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="142" y="-11" width="2029" height="1462" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -708,7 +712,8 @@
     <MESSAGE value="v0.4.2&#10;&#10;Now we have obstacles from both top and bottom :D" />
     <MESSAGE value="v0.4.2&#10;&#10;Obstacles fill entire window" />
     <MESSAGE value="v0.4.3&#10;&#10;Have both top and bottom obstacles now :D (fixed a really stupid bug D: )" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.4.3&#10;&#10;Have both top and bottom obstacles now :D (fixed a really stupid bug D: )" />
+    <MESSAGE value="v0.4.4&#10;&#10;Can detect whether the bird 'crashes' into the obstacles!" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.4.4&#10;&#10;Can detect whether the bird 'crashes' into the obstacles!" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1141,13 +1146,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="1334">
           <caret line="60" column="26" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1159,26 +1163,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Obstacle.java">
+    <entry file="file://$PROJECT_DIR$/src/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="31" />
+        <state relative-caret-position="5566">
+          <caret line="247" column="13" selection-start-line="247" selection-start-column="13" selection-end-line="247" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine.java">
+    <entry file="file://$PROJECT_DIR$/src/Obstacle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="246" column="13" selection-start-line="246" selection-start-column="13" selection-end-line="246" selection-end-column="13" />
+        <state relative-caret-position="-38">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FlappyBird.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
+        <state relative-caret-position="652">
+          <caret line="186" column="58" selection-start-line="186" selection-start-column="58" selection-end-line="186" selection-end-column="58" />
           <folding />
         </state>
       </provider>

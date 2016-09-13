@@ -139,19 +139,55 @@ public class FlappyBird {
 
     // RELATIVE POS
 
+    /**
+     * Returns if Flappy Bird is on obstacle's x positions.
+     *
+     * @param obstacle {Obstacle}
+     * @return {boolean}
+     */
     public boolean onXObstacle(Obstacle obstacle) {
-        return this.pos[0] >= obstacle.getXpos()
-                && this.pos[0] <= obstacle.getXpos() + obstacle.getWidth();
+        return (
+                // CASE 1: Front of bird hits the obstacle
+                this.pos[0] + this.getImgDimensions()[0] >= obstacle.getXpos()
+                        &&
+                        this.pos[0] <= obstacle.getXpos() + obstacle.getWidth()
+                        ||
+                        // CASE 2: Back of bird hits the obstacle
+                        this.pos[0] + this.getImgDimensions()[0] >= obstacle.getXpos()
+                                && this.pos[0] <= obstacle.getXpos() + obstacle.getWidth()
+                // CASE 3: Obstacle is in between bird
+        );
     }
 
+    /**
+     * Returns if Flappy Bird is on obstacle's x positions.
+     * @param obstacle {Obstacle}
+     * @param y_gap {int} Vertical spacing btn 2 obstacles in a pair
+     * @return {boolean}
+     */
     public boolean onYObstacle(Obstacle obstacle, int y_gap) {
         // If obstacle is oriented up
         if (obstacle.isOrientatedUp()) {
-            return this.pos[1] <= obstacle.getHeight();
+            return (
+                    // CASE 1: Top of bird hits obstacle
+                    this.pos[1] <= obstacle.getHeight()
+                            ||
+                            // CASE 2: Bottom of bird hits obstacle
+                            this.pos[1] + this.getImgDimensions()[1] <= obstacle
+                                    .getHeight()
+            );
         }
         // If obstacle is oriented down
         else {
-            return this.pos[1] >= obstacle.getHeight() + y_gap;
+            return (
+                    // CASE 1: Top of bird hits obstacle
+                    this.pos[1] >= obstacle.getHeight() + y_gap
+                            ||
+                            // CASE 2: Bottom of bird hits obstacle
+                            this.pos[1] + this.getImgDimensions()[1] >= obstacle.getHeight() + y_gap
+                    // CASE 3: Obstacle is in between bird
+            );
+
         }
     }
 
