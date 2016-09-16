@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
 /**
  * Created by Sayan Faraz on 2016-01-22.
@@ -232,6 +233,48 @@ public class Engine {
             obstacle.setXpos(obstacle.getXpos() - amountToMove);
         }
     }
+
+    /**
+     * Delete any obstacles that are off the screen. Push a new obstacle
+     * every time an obstacle is deleted
+     */
+    public void deleteOffScreenObstacles() {
+        // VARS
+        Iterator<Obstacle> obstacleIterator = obstacleStack.iterator();
+        int num_of_obstacles_to_add = 0;
+
+        while (obstacleIterator.hasNext()) {
+            // Get next obstacle to check
+            Obstacle obstacle = obstacleIterator.next();
+
+            // Check if obstacle is out of screen
+            if (obstacle.getXpos() + obstacle.getWidth() < -1) {
+                // If it is, remove it and remember to add new obstacle later
+                obstacleIterator.remove();
+                num_of_obstacles_to_add++;
+            }
+        }
+
+        // Add all the new obstacles needed
+        addMultipleObstacles(num_of_obstacles_to_add, obstacleStack.get(0).getXpos() +
+                obstacleStack.get(0).getWidth(), beginning_constraints);
+
+        //TODO: Add a 'greatest x pos' variable so that we know where
+        // the last block is
+
+
+//        for(Obstacle obstacle: obstacleStack) {
+//            if(obstacle.getXpos() + obstacle.getWidth() < -1) {
+//                obstacleStack.remove(obstacle);
+//                addMultipleObstacles(1, obstacleStack.get(0).getXpos() +
+//                        obstacleStack.get(0).getWidth(), beginning_constraints);
+//
+//                //TODO: Add a 'greatest x pos' variable so that we know where
+//                // the last block is
+//            }
+//        }
+    }
+
 
     /**
      * Return true if flappy bird has crashed; else return false.

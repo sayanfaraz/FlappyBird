@@ -140,7 +140,9 @@ public class Game extends JPanel implements MouseListener {
             // Move obstacles to the left every 0.5 secs
             if (currDate.getTime() - prevDate.getTime() > 500) {
                 resetObstacles(graphics);
+                engine.deleteOffScreenObstacles();
                 engine.moveObstacleStackToLeft(50);
+
 
                 prevDate = new Date();
             }
