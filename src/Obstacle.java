@@ -23,43 +23,90 @@ public class Obstacle {
 
     // GETTERS, SETTERS
 
+    /**
+     * Get x-position (pixel grid) of obstacle.
+     *
+     * @return {int}
+     */
     public int getXpos() {
         return xpos;
     }
 
+    /**
+     * Set x-position (pixel grid) of obstacle.
+     * @param xpos {int}
+     */
     public void setXpos(int xpos) {
         this.xpos = xpos;
     }
 
+    /**
+     * Is obstacle oriented up (coming from the top of the window)? If false,
+     * oriented down (coming from the bottom of the window).
+     * @return {boolean}
+     */
     public boolean isOrientatedUp() {
         return orientation;
     }
 
+    /**
+     * Set orientation of obstacle.
+     * True: obstacle oriented up (coming from the top of the window).
+     * False: obstacle oriented down (coming from the bottom of the window).
+     * @param orientation {boolean}
+     */
     public void setOrientation(boolean orientation) {
         this.orientation = orientation;
     }
 
+    /**
+     * Returns height of obstacle in pixels.
+     * @return {int}
+     */
     public int getHeight() {
         return height;
     }
 
-    public void setHeight(int dist) {
-        this.height = dist;
+    /**
+     * Set height of obstacle in pixels.
+     *
+     * @param height {int}
+     */
+    public void setHeight(int height) {
+        this.height = height;
     }
 
+    /**
+     * Get the width of obstacle (in pixels).
+     * @return {int}
+     */
     public int getWidth() {
         return width;
     }
 
+    /**
+     * Set width of obtacle in pixels.
+     * @param width {int}
+     */
     public void setWidth(int width) {
         this.width = width;
     }
 
+    /**
+     * Get color of obstacle.
+     * @return {Color} Color object
+     */
     public Color getColor() {
+        // Returning a NEW color object with same characteristics as
+        // obstacle's color
         return new Color(color.getRed(), color.getGreen(),
                 color.getBlue());
     }
 
+    /**
+     * Set color of obstacle.
+     * @param input_color {Color} Color object
+     */
     public void setColor(Color input_color) {
         this.color = new Color(input_color.getRed(), input_color.getGreen()
                 , input_color.getBlue());
