@@ -52,14 +52,27 @@ public class Engine {
         return obstacleStack;
     }
 
+    /**
+     * Set obstacle stack to ArrayList of obstacles given to function.
+     *
+     * @param obstacleStack {ArrayList<Obstacle>} Obstacle stack
+     */
     public void setObstacleStack(ArrayList<Obstacle> obstacleStack) {
         this.obstacleStack = obstacleStack;
     }
 
+    /**
+     * Get engine's flappy bird.
+     * @return {FlappyBird}
+     */
     public FlappyBird getFlappyBird() {
         return flappyBird;
     }
 
+    /**
+     * Set flappy bird for this engine.
+     * @param flappyBird {FlappyBird} Flappy bird object
+     */
     public void setFlappyBird(FlappyBird flappyBird) {
         this.flappyBird = flappyBird;
     }

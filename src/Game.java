@@ -18,6 +18,7 @@ import javax.swing.*;
 
 public class Game extends JPanel implements MouseListener {
 
+    public static final Color backgroundColor = new Color(194, 217, 239);
     private int gamePlay; // 0 for home screen, 1 for play, 2 for pause
     private boolean enteringGamePlay; // new game?
     private Engine engine;
@@ -50,13 +51,18 @@ public class Game extends JPanel implements MouseListener {
     }
 
     // INITIALIZE UI
+
+    /**
+     * Initialize the game's UI:
+     * -set title, size, location, colour, etc of window.
+     */
     private void initUI(JFrame jframe, JPanel jpanel) {
 
         // Set JFrame Appearance
         jframe.setTitle("Flappy Bird"); // title
         jframe.setSize(windowWidth, windowHeight); // size of window
         jframe.setLocationRelativeTo(null);
-        jframe.setBackground(new Color(194, 217, 239)); // background colour;
+        jframe.setBackground(backgroundColor); // background colour;
 
         // Set JFrame Behaviour
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exit on close
@@ -69,6 +75,10 @@ public class Game extends JPanel implements MouseListener {
         addMouseListener(this);
     }
 
+    /**
+     * Draw home screen.
+     * @param graphics {Graphics} Graphics object
+     */
     private void homeScreen(Graphics graphics) {
         // Define BufferedImages
         BufferedImage home_screen_img;
@@ -107,7 +117,7 @@ public class Game extends JPanel implements MouseListener {
                 // New game? Need a fresh canvas to draw on
                 if (enteringGamePlay) {
                     // Draw Canvas
-                    graphics.setColor(new Color(194, 217, 239));
+                    graphics.setColor(backgroundColor);
                     graphics.fillRect(0, 0, 1500, 1000);
 
                     // Game started, so set entering_game_play to false so that
@@ -130,16 +140,20 @@ public class Game extends JPanel implements MouseListener {
 
     // GAME ENGINE--------------------------------------------------------------
 
+    /**
+     * Controls gameplay and graphics while the game is actually being played.
+     * @param graphics {Graphics}
+     */
     private void gameEngine(Graphics graphics) {
 
         if(engine.getFlappyBird().isAlive()) {
             currDate = new Date();
 
-            resetBird(graphics);
+            eraseBird(graphics);
 
             // Move obstacles to the left every 0.5 secs
             if (currDate.getTime() - prevDate.getTime() > 500) {
-                resetObstacles(graphics);
+                eraseObstacles(graphics);
                 engine.deleteOffScreenObstacles();
                 engine.moveObstacleStackToLeft(50);
 
@@ -164,10 +178,16 @@ public class Game extends JPanel implements MouseListener {
         }
     }
 
+    /**
+     * Pauses the game, and controls graphics while game is paused.
+     */
     private void gamePause() {
         gamePlay = 0;
     }
 
+    /**
+     * Resets game and prepares for new game to be played.
+     */
     private void gameReset() {
         gamePlay = 0;
         enteringGamePlay = true;
@@ -218,6 +238,11 @@ public class Game extends JPanel implements MouseListener {
     // GRAPHICS HELPER FUNCTIONS------------------------------------------------
 
     // OBSTACLES
+
+    /**
+     * Draw obstacles on screen.
+     * @param graphics {Graphics}
+     */
     private void drawObstacles(Graphics graphics) {
         // For each obstacle in obstacle-stack
         for (Obstacle obstacle : engine.getObstacleStack()) {
@@ -239,11 +264,15 @@ public class Game extends JPanel implements MouseListener {
         }
     }
 
-    private void resetObstacles(Graphics graphics) {
+    /**
+     * Erase obstacles from screen (by coloring them with the background color)
+     * @param graphics
+     */
+    private void eraseObstacles(Graphics graphics) {
         // For each obstacle in obstacle stack
         for(Obstacle obstacle: engine.getObstacleStack()) {
-            // REPAINT THAT OBSTACLE IN BLUE
-            graphics.setColor(new Color(194, 217, 239));
+            // REPAINT THAT OBSTACLE IN BACKGROUND COLOR
+            graphics.setColor(backgroundColor);
 
             // Check orientation
             if (obstacle.isOrientatedUp()) {  // if oriented upwards
@@ -260,11 +289,19 @@ public class Game extends JPanel implements MouseListener {
     }
 
     // BIRD
+
+    /**
+     * Carries out effects of clicking (to make the flappy bird fly).
+     */
     private void clickBird() {
         engine.getFlappyBird().clickBird();
         repaint();
     }
 
+    /**
+     * Draw the flappy bird on the screen.
+     * @param graphics {Graphics}
+     */
     private void drawBird(Graphics graphics) {
         BufferedImage bird_img = null;
 
@@ -285,9 +322,15 @@ public class Game extends JPanel implements MouseListener {
                 scaled_parameters[1], null);
     }
 
-    private void resetBird(Graphics graphics) {
-        // Reset current bird
-        graphics.setColor(new Color(194, 217, 239));
+    /**
+     * Erase flappy bird from screen (by coloring it in the background color)
+     * @param graphics {Graphics}
+     */
+    private void eraseBird(Graphics graphics) {
+        // Set color to background color
+        graphics.setColor(backgroundColor);
+
+        // Color bird with background color (and thus erasing it)
         graphics.fillRect(engine.getFlappyBird().getPrevPos()[0],
                 engine.getFlappyBird().getPrevPos()[1],
                 engine.getFlappyBird().getImgDimensions()[0],
