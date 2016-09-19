@@ -41,6 +41,11 @@ public class Engine {
         // Make Flappy bird
         flappyBird = new FlappyBird();
     }
+
+    public Engine reset() {
+        return new Engine(windowWidth, windowHeight);
+    }
+
     // GETTERS, SETTERS---------------------------------------------------------
 
     public ArrayList<Obstacle> getObstacleStack() {

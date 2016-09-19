@@ -171,6 +171,7 @@ public class Game extends JPanel implements MouseListener {
     private void gameReset() {
         gamePlay = 0;
         enteringGamePlay = true;
+        engine = engine.reset();
     }
 
     // MOUSE LISTENERS----------------------------------------------------------
