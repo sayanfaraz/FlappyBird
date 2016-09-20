@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -6,9 +7,14 @@ import org.testng.annotations.Test;
  * Created by Sayan Faraz on 2016-09-13.
  */
 public class FlappyBirdTest {
+
+    // ATTRIBUTES
+    public FlappyBird testFlappyBird;
+
+    // SETUP, TEARDOWN
     @BeforeMethod
     public void setUp() throws Exception {
-
+        testFlappyBird = new FlappyBird();
     }
 
     @AfterMethod
@@ -18,12 +24,27 @@ public class FlappyBirdTest {
 
     @Test
     public void testGetPos() throws Exception {
+        // Vars
+        int[] expectedPos = {50, 0};
 
+        // Test
+        Assert.assertEquals(testFlappyBird.getPos(), expectedPos);
     }
 
     @Test
     public void testSetPos() throws Exception {
+        // Vars
+        int x = 40, y = 40;
+        int[] expectedPos = {40, 40};
+        int[] expectedPrevPos = {50, 0};
 
+        // Setup
+        testFlappyBird.setPos(expectedPos);
+
+        // Test: set pos
+        Assert.assertEquals(testFlappyBird.getPos(), expectedPos);
+        // Test: set prev pos
+        Assert.assertEquals(testFlappyBird.getPrevPos(), expectedPrevPos);
     }
 
     @Test

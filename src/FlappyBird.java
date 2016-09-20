@@ -13,7 +13,7 @@ public class FlappyBird {
 
     public FlappyBird() {
         pos[0] = 50;
-        pos[1] = 0;  // set pos to (0,0)
+        pos[1] = 0;  // set pos to (50,0)
         imgDimensions = FlappyBird.scaleBirdInts(10);
 
         alive = true;  // FlappyBird is alive
@@ -35,11 +35,13 @@ public class FlappyBird {
         return new int[]{x, y};
     }
 
+    //TODO: setPos can't accept x pos < 0
     /**
-     * Set position (pixels) of flappy bird.
-     * @param pos {int[]} [x position, y position]
+     * Set position (pixels) of flappy bird and save previous pos.
+     * @param pos {int[]} [x position, y position], x > 0
      */
     public void setPos(int[] pos) {
+
         setPrevPos(this.getPos());
 
         int new_pos_x = pos[0];
